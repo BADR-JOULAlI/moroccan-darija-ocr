@@ -8,6 +8,8 @@ L'audit du format AtlasOCR, le chevauchement observé entre ses tests et AtlasOC
 
 Deux notebooks sont disponibles dans `notebooks/` : `01_dataset_visualization.ipynb` explore les images et transcriptions, tandis que `02_training_visualization.ipynb` affiche les courbes d'apprentissage, les métriques du test et les erreurs visuelles. Ils utilisent les sorties déjà présentes et ne téléchargent pas de nouvelles données.
 
+`03_test_images_transcriptions.ipynb` affiche les images du test officiel avec la référence, la prédiction et le CER de chaque ligne. Il exporte aussi `runs/baseline/test/test_images_transcriptions_gallery.png`.
+
 ![Courbes de validation et d'apprentissage](assets/validation_training_curves.png)
 
 Pour préparer une adaptation, fournissez d'abord des manifests `train.jsonl` et `val.jsonl` contenant uniquement des couples vérifiés image d'une ligne / transcription d'une ligne. Le validateur refuse les paragraphes multiligne et les séquences CTC impossibles :
