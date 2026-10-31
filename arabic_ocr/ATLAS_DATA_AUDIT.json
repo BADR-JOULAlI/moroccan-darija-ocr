@@ -1,0 +1,3152 @@
+{
+  "audit_created_utc": "2026-10-31T15:57:42.485874+00:00",
+  "scope": "Read-only bounded metadata + reference samples. No full parquet downloads, training, OCR inference, benchmark error analysis, or line-label generation.",
+  "dataset": {
+    "id": "atlasia/atlasOCR-data",
+    "url": "https://huggingface.co/datasets/atlasia/atlasOCR-data",
+    "revision": "9ecbcbb8c964057f7635ac33032fb89117612154",
+    "last_modified": "2025-09-16T15:55:11.000Z",
+    "private": false,
+    "gated": false,
+    "features": [
+      {
+        "name": "text",
+        "dtype": "string"
+      },
+      {
+        "name": "image",
+        "dtype": "image"
+      },
+      {
+        "name": "metadata",
+        "struct": [
+          {
+            "name": "contains_title",
+            "dtype": "bool"
+          },
+          {
+            "name": "font",
+            "dtype": "string"
+          }
+        ]
+      }
+    ],
+    "splits": [
+      {
+        "name": "train",
+        "num_bytes": 12777223035.970001,
+        "num_examples": 26162
+      },
+      {
+        "name": "validation",
+        "num_bytes": 1892329629.54,
+        "num_examples": 3930
+      },
+      {
+        "name": "test",
+        "num_bytes": 56546649,
+        "num_examples": 196
+      }
+    ],
+    "files": {
+      "parquet_files": [
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "bytes": 56217599,
+          "lfs_sha256": "80fcb5f1d2d4992a38363e1714817b68d0cca5f8f431b562b32bc00730324181"
+        },
+        {
+          "path": "data/train-00000-of-00026.parquet",
+          "bytes": 262727680,
+          "lfs_sha256": "73865d5190694489cd752ac71bde62eaf6da522b395fb9a53446e159edfe26fa"
+        },
+        {
+          "path": "data/train-00001-of-00026.parquet",
+          "bytes": 260882006,
+          "lfs_sha256": "a67889f16acb6964d81f0dcde04f700dfecd9b1d47cc61fba9f1b8d83b08d10c"
+        },
+        {
+          "path": "data/train-00002-of-00026.parquet",
+          "bytes": 290461963,
+          "lfs_sha256": "5b5b1673d808408eae44e5ea151cfcda04002f3ad0175311ea6feb0559781808"
+        },
+        {
+          "path": "data/train-00003-of-00026.parquet",
+          "bytes": 283848922,
+          "lfs_sha256": "4e25b1e12a0ae5bb8081b6cb89751ac73437c3dd570ba07c946d86cd6314cc1b"
+        },
+        {
+          "path": "data/train-00004-of-00026.parquet",
+          "bytes": 276134669,
+          "lfs_sha256": "19b81466e1630af82d737dab85d82a970e60916e03aca0f5a33a5e56bb491136"
+        },
+        {
+          "path": "data/train-00005-of-00026.parquet",
+          "bytes": 268352303,
+          "lfs_sha256": "11327d4a8e2cf2f1eeaa72ddcc8adc4a7dd8757bca68206e1e9dfc8e81f2535c"
+        },
+        {
+          "path": "data/train-00006-of-00026.parquet",
+          "bytes": 294267203,
+          "lfs_sha256": "2d15c94a7415268279497af29e465cd502c9048db7a02116e64fff134ae8a5d3"
+        },
+        {
+          "path": "data/train-00007-of-00026.parquet",
+          "bytes": 280027111,
+          "lfs_sha256": "0699792899f406ba7439d7be1b0cf1cadfe92960c5a704846fdc0bbf03c356c5"
+        },
+        {
+          "path": "data/train-00008-of-00026.parquet",
+          "bytes": 327920960,
+          "lfs_sha256": "e6f34c6a2a7b75d74478878ce07f17399aff7e8dc0717f02b190ee805c90bdb4"
+        },
+        {
+          "path": "data/train-00009-of-00026.parquet",
+          "bytes": 327938942,
+          "lfs_sha256": "8fe25be4c05e84740d8498ca0de9bc8291ec00760fff2005f9095326570d913b"
+        },
+        {
+          "path": "data/train-00010-of-00026.parquet",
+          "bytes": 306418952,
+          "lfs_sha256": "2ff565d2027e9eee5ded85c1d039ed8cf874d7284e6b59de11c32471ec6f2aab"
+        },
+        {
+          "path": "data/train-00011-of-00026.parquet",
+          "bytes": 323202317,
+          "lfs_sha256": "313bf6243ec1f8fdd61ff4a92ac0520174628f5ee23bfa6ddcb047654eb226cd"
+        },
+        {
+          "path": "data/train-00012-of-00026.parquet",
+          "bytes": 325777585,
+          "lfs_sha256": "e6bbaf3cfedc1c2ea979ea793aa7c20258ff33e84abb377ceddb2f62a85d1054"
+        },
+        {
+          "path": "data/train-00013-of-00026.parquet",
+          "bytes": 333318350,
+          "lfs_sha256": "8e7077c235ff000e81756df62cdf96a249018b0fa58062ff33ef556677fec06e"
+        },
+        {
+          "path": "data/train-00014-of-00026.parquet",
+          "bytes": 316710342,
+          "lfs_sha256": "df038fa74ffe5b7880d74fdedaf1d87a7ce5b4b32cd2d1b2d78c10c1168c1c04"
+        },
+        {
+          "path": "data/train-00015-of-00026.parquet",
+          "bytes": 334296478,
+          "lfs_sha256": "3795d55f09c8395700c06fd80773ff1cc52bc0aae59faf5f65fc3c08577932c3"
+        },
+        {
+          "path": "data/train-00016-of-00026.parquet",
+          "bytes": 330031330,
+          "lfs_sha256": "4141bcbdb21c974ba2528b480291bab126fb69b36b10ce61b8919f533ea20bb7"
+        },
+        {
+          "path": "data/train-00017-of-00026.parquet",
+          "bytes": 328862678,
+          "lfs_sha256": "696ad09cfd8b1d9db8cc614458da96aa77f7a57dd931e7c945e8663925341183"
+        },
+        {
+          "path": "data/train-00018-of-00026.parquet",
+          "bytes": 338250674,
+          "lfs_sha256": "63ffa011e9e3ba7ef199983830f3c532b54eae27aa6e639703e323da67a1134a"
+        },
+        {
+          "path": "data/train-00019-of-00026.parquet",
+          "bytes": 331119168,
+          "lfs_sha256": "b56d0a3e9264eb2d0d00b32a7e51171e7a2479d766f4aaf3a0ede047ba51eb1b"
+        },
+        {
+          "path": "data/train-00020-of-00026.parquet",
+          "bytes": 351006139,
+          "lfs_sha256": "00cf7280d5ee90854b156ffc13972954cf1638eb8f50733e7127ea7dbcb56aa5"
+        },
+        {
+          "path": "data/train-00021-of-00026.parquet",
+          "bytes": 311638059,
+          "lfs_sha256": "0036bb6809aac690bdffdddaf2780072b192fb7b376d00030278e250b8f8b062"
+        },
+        {
+          "path": "data/train-00022-of-00026.parquet",
+          "bytes": 319280087,
+          "lfs_sha256": "384f4dfe68e9839e0b2313e7cb648a6ba7f644151917659023067a6bf4d7ec0e"
+        },
+        {
+          "path": "data/train-00023-of-00026.parquet",
+          "bytes": 330306505,
+          "lfs_sha256": "20ba132bc4a3b4e5c220a5eeeac5b1e6b391c69603a72f16417ad417d642d0d3"
+        },
+        {
+          "path": "data/train-00024-of-00026.parquet",
+          "bytes": 329873292,
+          "lfs_sha256": "b157f9af1d5052e93b41b41d3f88765855e55b61dba810ae55c8e54960d207c4"
+        },
+        {
+          "path": "data/train-00025-of-00026.parquet",
+          "bytes": 334280052,
+          "lfs_sha256": "53fa853ba1ee394dac36fcf2aff706575e4fe478359f638babfd42c1bfc530ff"
+        },
+        {
+          "path": "data/validation-00000-of-00004.parquet",
+          "bytes": 297904988,
+          "lfs_sha256": "b19caa69488681d807a60435c97f6d84e376a0af9ffde75dca4cd212746c04d2"
+        },
+        {
+          "path": "data/validation-00001-of-00004.parquet",
+          "bytes": 266203330,
+          "lfs_sha256": "f177ff822c6393816f0545007cb07a0fac5d90a2a5a50a6bc9aa7fb991458278"
+        },
+        {
+          "path": "data/validation-00002-of-00004.parquet",
+          "bytes": 348061323,
+          "lfs_sha256": "0cae5a4f97eefad3f26e0c7148b92a74a8afb15f4eeec78166770355a55767b1"
+        },
+        {
+          "path": "data/validation-00003-of-00004.parquet",
+          "bytes": 334739796,
+          "lfs_sha256": "bd3ac427addfbfe073869d22ef779eeb112b1e763d2d9e7b7d3e6fabd3db11ff"
+        }
+      ],
+      "parquet_file_count": 31,
+      "compressed_bytes_total": 9420060803,
+      "has_standalone_license_file": false
+    }
+  },
+  "benchmark": {
+    "id": "atlasia/AtlasOCRBench",
+    "url": "https://huggingface.co/datasets/atlasia/AtlasOCRBench",
+    "revision": "1e860eb5c22cbb3cc43ffa721ab36029e6849db3",
+    "last_modified": "2025-09-16T15:52:02.000Z",
+    "gated": false,
+    "features": [
+      {
+        "name": "text",
+        "dtype": "string"
+      },
+      {
+        "name": "image",
+        "dtype": "image"
+      },
+      {
+        "name": "id",
+        "dtype": "string"
+      }
+    ],
+    "splits": [
+      {
+        "name": "test",
+        "num_bytes": 62278678,
+        "num_examples": 251
+      }
+    ],
+    "files": {
+      "parquet_files": [
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "bytes": 61912188,
+          "lfs_sha256": "ebc92cb0ae92d327c64e1028e3205ebdd2ba873757c7d94fe756dea93560ad83"
+        }
+      ],
+      "parquet_file_count": 1,
+      "compressed_bytes_total": 61912188,
+      "has_standalone_license_file": false
+    },
+    "use_policy": "Frozen test only; never use benchmark labels, images, crops or errors for training, selecting alignments, thresholds, vocabulary or hyperparameters."
+  },
+  "cached_asset_revisions_observed": [
+    "1e860eb5c22cbb3cc43ffa721ab36029e6849db3",
+    "9ecbcbb8c964057f7635ac33032fb89117612154"
+  ],
+  "sample_summaries": {
+    "train_rows": {
+      "num_rows_total": 26162,
+      "sample_size": 20,
+      "features": [
+        {
+          "feature_idx": 0,
+          "name": "text",
+          "type": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        {
+          "feature_idx": 1,
+          "name": "image",
+          "type": {
+            "_type": "Image"
+          }
+        },
+        {
+          "feature_idx": 2,
+          "name": "metadata",
+          "type": {
+            "contains_title": {
+              "dtype": "bool",
+              "_type": "Value"
+            },
+            "font": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        }
+      ],
+      "partial": false,
+      "text_preserved_without_normalization": true,
+      "rows_with_newlines": 0,
+      "rows_with_truncated_cells": 0,
+      "text_length_min_median_max": [
+        171,
+        433.0,
+        1279
+      ],
+      "all_observed_row_keys": [
+        "image",
+        "metadata",
+        "text"
+      ],
+      "all_observed_metadata_keys": [
+        "contains_title",
+        "font"
+      ],
+      "rows": [
+        {
+          "row_idx": 0,
+          "id_if_published": null,
+          "text_characters": 580,
+          "text_sha256_utf8": "3ab36c631d9b3477a6387d1f7a5cb467c07ede6a637afa34aec7a6704503668a",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1035,
+          "image_height": 527,
+          "metadata": {
+            "contains_title": false,
+            "font": "Mada-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 1,
+          "id_if_published": null,
+          "text_characters": 449,
+          "text_sha256_utf8": "9e090884a846d74850d3261a7a7b8a37d6559805e143e4b79b3b6783f6e4f5c4",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1076,
+          "image_height": 438,
+          "metadata": {
+            "contains_title": false,
+            "font": "Mada-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 2,
+          "id_if_published": null,
+          "text_characters": 171,
+          "text_sha256_utf8": "861a1ed51207f91fc3e50c5d3dca862b02a78d0d1aee9d6f147d239480f05db0",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 951,
+          "image_height": 303,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_Condensed-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 3,
+          "id_if_published": null,
+          "text_characters": 248,
+          "text_sha256_utf8": "b83f8c6bf1b8dc42d2dd256190b12ab1a2ff3e0265f14858021ac4ab41bb61c5",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1104,
+          "image_height": 248,
+          "metadata": {
+            "contains_title": false,
+            "font": "Mada-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 4,
+          "id_if_published": null,
+          "text_characters": 372,
+          "text_sha256_utf8": "c4c73f4e2d070b961d416b170bf864202f48b904075402f64c34e9b6dc8e8e84",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1601,
+          "image_height": 346,
+          "metadata": {
+            "contains_title": false,
+            "font": "Vazirmatn-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 5,
+          "id_if_published": null,
+          "text_characters": 267,
+          "text_sha256_utf8": "595a91a46b01a940344ea20913aed36b5a30289e43fa67f142c1b488524a5d27",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1557,
+          "image_height": 213,
+          "metadata": {
+            "contains_title": false,
+            "font": "Mada-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 6,
+          "id_if_published": null,
+          "text_characters": 570,
+          "text_sha256_utf8": "350f501b72ff351624d3faefd642a18794165789b4aa42f7c555612497f4ba9c",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 871,
+          "image_height": 613,
+          "metadata": {
+            "contains_title": false,
+            "font": "Vazirmatn-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 7,
+          "id_if_published": null,
+          "text_characters": 700,
+          "text_sha256_utf8": "86bc5f35845f9dc889030d4e2a62a9a9e08dfbda3f1b274664cc48d9f3a47226",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 918,
+          "image_height": 594,
+          "metadata": {
+            "contains_title": true,
+            "font": "Vazirmatn-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 8,
+          "id_if_published": null,
+          "text_characters": 881,
+          "text_sha256_utf8": "f717059dd5e39695f9b9d8f17b103e6aa2151550552d02f95af8e4b5fad3e983",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1555,
+          "image_height": 549,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic_ExtraCondensed-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 9,
+          "id_if_published": null,
+          "text_characters": 233,
+          "text_sha256_utf8": "c88e7331a1816fba93ca3b31685cbdbb524ad087cf5608c0d587895a3e69cd36",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1628,
+          "image_height": 300,
+          "metadata": {
+            "contains_title": false,
+            "font": "Mada-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 10,
+          "id_if_published": null,
+          "text_characters": 519,
+          "text_sha256_utf8": "6b29cd2d8291d3aa78462a8b02a6f89db7e369f2c7d6fd8685586cb0891c1b38",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1498,
+          "image_height": 658,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 11,
+          "id_if_published": null,
+          "text_characters": 482,
+          "text_sha256_utf8": "b763655beb5807a8240a9363c8757af9e0e2727e926b6b5bdaa2d493054d26dc",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 849,
+          "image_height": 582,
+          "metadata": {
+            "contains_title": true,
+            "font": "Vazirmatn-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 12,
+          "id_if_published": null,
+          "text_characters": 1279,
+          "text_sha256_utf8": "04760df4f967b38394a3266cf9e8b8908af3a88ccfeb2484879c408a591cd759",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1659,
+          "image_height": 501,
+          "metadata": {
+            "contains_title": true,
+            "font": "Vazirmatn-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 13,
+          "id_if_published": null,
+          "text_characters": 245,
+          "text_sha256_utf8": "7841ee982f3541674d5fdd0c9743e1ac5f2ce1a2e656688615b7c031c5977747",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1567,
+          "image_height": 379,
+          "metadata": {
+            "contains_title": true,
+            "font": "IBMPlexSansArabic-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 14,
+          "id_if_published": null,
+          "text_characters": 621,
+          "text_sha256_utf8": "e3d24ed1002bf5243eefa872103cbea2073bd41de4d352aff36fc82e72cca154",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1077,
+          "image_height": 764,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoKufiArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 15,
+          "id_if_published": null,
+          "text_characters": 417,
+          "text_sha256_utf8": "fa7a403921193f6b29ec92a9479aa334afc32317fac994c7c7a0afc301277357",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 840,
+          "image_height": 605,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_Condensed-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 16,
+          "id_if_published": null,
+          "text_characters": 273,
+          "text_sha256_utf8": "7c2d2a6d0ec15679a15cf9ef895fbf60222da2a381218342ff966c5b51614995",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1046,
+          "image_height": 327,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoKufiArabic-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 17,
+          "id_if_published": null,
+          "text_characters": 259,
+          "text_sha256_utf8": "a9a1e01133375b0c3ca95f9d4192c5da19a87d99531f53743eb80a1daa1ac178",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 828,
+          "image_height": 371,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_SemiCondensed-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 18,
+          "id_if_published": null,
+          "text_characters": 233,
+          "text_sha256_utf8": "134ed7fd25e3f2f001192dae38512bc2ffd14ac18930601e2c043490af02ea2d",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1546,
+          "image_height": 287,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 19,
+          "id_if_published": null,
+          "text_characters": 709,
+          "text_sha256_utf8": "28976150d16a0922adf729adffa3db916629e00c8eef505544abb8d013e6bc56",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1229,
+          "image_height": 747,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoKufiArabic-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        }
+      ]
+    },
+    "validation_rows": {
+      "num_rows_total": 3930,
+      "sample_size": 20,
+      "features": [
+        {
+          "feature_idx": 0,
+          "name": "text",
+          "type": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        {
+          "feature_idx": 1,
+          "name": "image",
+          "type": {
+            "_type": "Image"
+          }
+        },
+        {
+          "feature_idx": 2,
+          "name": "metadata",
+          "type": {
+            "contains_title": {
+              "dtype": "bool",
+              "_type": "Value"
+            },
+            "font": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        }
+      ],
+      "partial": false,
+      "text_preserved_without_normalization": true,
+      "rows_with_newlines": 0,
+      "rows_with_truncated_cells": 0,
+      "text_length_min_median_max": [
+        129,
+        291.0,
+        981
+      ],
+      "all_observed_row_keys": [
+        "image",
+        "metadata",
+        "text"
+      ],
+      "all_observed_metadata_keys": [
+        "contains_title",
+        "font"
+      ],
+      "rows": [
+        {
+          "row_idx": 0,
+          "id_if_published": null,
+          "text_characters": 981,
+          "text_sha256_utf8": "5504496d61e58aa50c84d3ed11e0fd881745c26957c9b2a22087ca54f7ce772a",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1577,
+          "image_height": 560,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoKufiArabic-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 1,
+          "id_if_published": null,
+          "text_characters": 621,
+          "text_sha256_utf8": "d71c8606b83dbccae3df5880f1740733909cdfa1d57a9206e8346eafe639686c",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1729,
+          "image_height": 733,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoKufiArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 2,
+          "id_if_published": null,
+          "text_characters": 486,
+          "text_sha256_utf8": "f001a9f0736b90f14b45931ee52f6bff63eacae26584ab6a6872b05d499f0bc2",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 817,
+          "image_height": 632,
+          "metadata": {
+            "contains_title": true,
+            "font": "Mada-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 3,
+          "id_if_published": null,
+          "text_characters": 229,
+          "text_sha256_utf8": "5ada05c74a0c641ebe8d2ad32c417260e94eba2033643d91dbc482ada4f2a16b",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 838,
+          "image_height": 378,
+          "metadata": {
+            "contains_title": false,
+            "font": "Vazirmatn-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 4,
+          "id_if_published": null,
+          "text_characters": 234,
+          "text_sha256_utf8": "b2928518f0e7e2c0852dfe9a39656a57447e3a33be979290034f6fcf70c0b313",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1657,
+          "image_height": 334,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_Condensed-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 5,
+          "id_if_published": null,
+          "text_characters": 766,
+          "text_sha256_utf8": "dcccd8be38a9d1b883322be29b7edf8a308677658e904a89621127c7650e5711",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1609,
+          "image_height": 528,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_Condensed-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 6,
+          "id_if_published": null,
+          "text_characters": 177,
+          "text_sha256_utf8": "4797e42d317b6c854cac0f55dc9ae1108ff04bc523aac41dce761c3de6a7b14b",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1541,
+          "image_height": 516,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 7,
+          "id_if_published": null,
+          "text_characters": 455,
+          "text_sha256_utf8": "f03b2c8864467741e5cbe422eb58b8d32b04938bbd3996f70777bf6dda377ab4",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1162,
+          "image_height": 440,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoNaskhArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 8,
+          "id_if_published": null,
+          "text_characters": 656,
+          "text_sha256_utf8": "ff74ab291dd0495e19f9d14af0e7ab63a549329c2a440cf99671bbf10298d21b",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1030,
+          "image_height": 699,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoKufiArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 9,
+          "id_if_published": null,
+          "text_characters": 257,
+          "text_sha256_utf8": "0467b57d1b611bc88ae265ea1194798fcac019d5823209170083375af1e2f9bd",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1562,
+          "image_height": 118,
+          "metadata": {
+            "contains_title": false,
+            "font": "IBMPlexSansArabic-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 10,
+          "id_if_published": null,
+          "text_characters": 532,
+          "text_sha256_utf8": "6611ef85862beaeb2c739dfbce8bdaacd960c2c752c0eef62a6de3fcc7bb666c",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1040,
+          "image_height": 518,
+          "metadata": {
+            "contains_title": true,
+            "font": "Mada-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 11,
+          "id_if_published": null,
+          "text_characters": 629,
+          "text_sha256_utf8": "3aac38fa03f84dfb3804b418227b725049a821ac09f0e39cb04c983e58005af1",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1240,
+          "image_height": 769,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic_SemiCondensed-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 12,
+          "id_if_published": null,
+          "text_characters": 268,
+          "text_sha256_utf8": "c4dcd8da9ef467e07891339525bf64c68dae7910faa450bbbe9deb1072f6d8e7",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1191,
+          "image_height": 315,
+          "metadata": {
+            "contains_title": true,
+            "font": "Vazirmatn-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 13,
+          "id_if_published": null,
+          "text_characters": 480,
+          "text_sha256_utf8": "a5834a2ef85874ced9be4952e6a5ac3c22388474d9e4ceba5728cc4796403390",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 794,
+          "image_height": 387,
+          "metadata": {
+            "contains_title": false,
+            "font": "IBMPlexSansArabic-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 14,
+          "id_if_published": null,
+          "text_characters": 198,
+          "text_sha256_utf8": "a364b73204c198766c9e3def7785432fd10a0bd2586a3dcade931f633c2fdd0d",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1607,
+          "image_height": 408,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_Condensed-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 15,
+          "id_if_published": null,
+          "text_characters": 232,
+          "text_sha256_utf8": "f123370b8382d39fafb01789b3e9d83cfb43061aa37a7530b2e036c861085bec",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1700,
+          "image_height": 225,
+          "metadata": {
+            "contains_title": false,
+            "font": "IBMPlexSansArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 16,
+          "id_if_published": null,
+          "text_characters": 267,
+          "text_sha256_utf8": "7a6e3d10e654853524a3a461aaa15c56829fbdeff136edc8031b1255c2c8cae6",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1153,
+          "image_height": 204,
+          "metadata": {
+            "contains_title": true,
+            "font": "Mada-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 17,
+          "id_if_published": null,
+          "text_characters": 314,
+          "text_sha256_utf8": "bed6a44012bf5a0c1bff09256df4699e9ca3c67b1fc7bab8f4904387d6661a0e",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 989,
+          "image_height": 291,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic_Condensed-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 18,
+          "id_if_published": null,
+          "text_characters": 129,
+          "text_sha256_utf8": "7a1319941b59023cbf52cff3b362eec32d4a11b9b3bc63ff99c1ef895b5fda49",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1020,
+          "image_height": 177,
+          "metadata": {
+            "contains_title": false,
+            "font": "Fustat-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 19,
+          "id_if_published": null,
+          "text_characters": 168,
+          "text_sha256_utf8": "ea1914d50a0fe17c5b8c6d56eb404c761642fbb73f248e4d8e59f23250077264",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 815,
+          "image_height": 461,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic_ExtraCondensed-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        }
+      ]
+    },
+    "data_test_rows": {
+      "num_rows_total": 196,
+      "sample_size": 20,
+      "features": [
+        {
+          "feature_idx": 0,
+          "name": "text",
+          "type": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        {
+          "feature_idx": 1,
+          "name": "image",
+          "type": {
+            "_type": "Image"
+          }
+        },
+        {
+          "feature_idx": 2,
+          "name": "metadata",
+          "type": {
+            "contains_title": {
+              "dtype": "bool",
+              "_type": "Value"
+            },
+            "font": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        }
+      ],
+      "partial": false,
+      "text_preserved_without_normalization": true,
+      "rows_with_newlines": 0,
+      "rows_with_truncated_cells": 0,
+      "text_length_min_median_max": [
+        129,
+        461.0,
+        1076
+      ],
+      "all_observed_row_keys": [
+        "image",
+        "metadata",
+        "text"
+      ],
+      "all_observed_metadata_keys": [
+        "contains_title",
+        "font"
+      ],
+      "rows": [
+        {
+          "row_idx": 0,
+          "id_if_published": null,
+          "text_characters": 650,
+          "text_sha256_utf8": "6a6e7c043c0248bc419ecec1506bfb6505edc84492e55e19b42d1db501da88a8",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 880,
+          "image_height": 713,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_SemiCondensed-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 1,
+          "id_if_published": null,
+          "text_characters": 473,
+          "text_sha256_utf8": "4fc7587779d7cb4dc59fedf8ab2e85235973e4d67f5c74e20f1f96ac98204cfb",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1231,
+          "image_height": 600,
+          "metadata": {
+            "contains_title": false,
+            "font": "IBMPlexSansArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 2,
+          "id_if_published": null,
+          "text_characters": 536,
+          "text_sha256_utf8": "09cd1b21e739f9345555b5e4cfbfcb6f62e8870cfa14d09fa0ddcbb08c1d55a1",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1583,
+          "image_height": 415,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoNaskhArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 3,
+          "id_if_published": null,
+          "text_characters": 241,
+          "text_sha256_utf8": "7824e9a00049a8383c39f9137ce4b9c69f3218ab6ed9835ef8b860884cf05d08",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 871,
+          "image_height": 341,
+          "metadata": {
+            "contains_title": false,
+            "font": "Vazirmatn-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 4,
+          "id_if_published": null,
+          "text_characters": 229,
+          "text_sha256_utf8": "c595e4c1eb6796015b295650d434d0c1ae78a82659decf07e964ec0c68fef1a2",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1639,
+          "image_height": 225,
+          "metadata": {
+            "contains_title": false,
+            "font": "Fustat-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 5,
+          "id_if_published": null,
+          "text_characters": 1076,
+          "text_sha256_utf8": "7dae97b90217a2bd5ec7b11423106cf5053ff7f3cf269866044b5f31be7d20ce",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1569,
+          "image_height": 831,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic_SemiCondensed-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 6,
+          "id_if_published": null,
+          "text_characters": 129,
+          "text_sha256_utf8": "0f10f136590fd45a988a30aa4098f2b8d530161220d1d32362aa48590c6df552",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1111,
+          "image_height": 158,
+          "metadata": {
+            "contains_title": true,
+            "font": "Mada-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 7,
+          "id_if_published": null,
+          "text_characters": 196,
+          "text_sha256_utf8": "9320b5591d77b7216d61004c0e0b3c8ff20e644a3c252544c652c1b39da00b14",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 863,
+          "image_height": 366,
+          "metadata": {
+            "contains_title": true,
+            "font": "Mada-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 8,
+          "id_if_published": null,
+          "text_characters": 958,
+          "text_sha256_utf8": "27975ed21a83f7bef238c8cde8377b73a9d5eecf2dbd664072e1f531a0f12451",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1753,
+          "image_height": 620,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_ExtraCondensed-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 9,
+          "id_if_published": null,
+          "text_characters": 610,
+          "text_sha256_utf8": "29752148bbdccdafe31285f27ddc2de373d816899cb86b268390e53d8f65ed0a",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 911,
+          "image_height": 652,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 10,
+          "id_if_published": null,
+          "text_characters": 350,
+          "text_sha256_utf8": "46c1be1c1b522a6bcfebe62a5b9f5e79b73727fe6ef405d8b03e1ac0d473a40c",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 907,
+          "image_height": 662,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoKufiArabic-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 11,
+          "id_if_published": null,
+          "text_characters": 610,
+          "text_sha256_utf8": "50664dca31c213d471be7a4ca2d0c538bbf92cfedbab23f31cd445a65df9f843",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1548,
+          "image_height": 555,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 12,
+          "id_if_published": null,
+          "text_characters": 259,
+          "text_sha256_utf8": "cbd1ea52dc5637498a41a2ef56e6431adfc7144d3a73a5d8bf5530c9697665f7",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 779,
+          "image_height": 356,
+          "metadata": {
+            "contains_title": false,
+            "font": "Mada-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 13,
+          "id_if_published": null,
+          "text_characters": 509,
+          "text_sha256_utf8": "fe543d00b3d141e276727e13f4b6bf89f94c9765840c7b6f92fe019db4ed6a08",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1004,
+          "image_height": 611,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 14,
+          "id_if_published": null,
+          "text_characters": 241,
+          "text_sha256_utf8": "672661c029326a337fbec513f39ee8cb18a172ef34b556d26910c3a5877ddf18",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1075,
+          "image_height": 317,
+          "metadata": {
+            "contains_title": true,
+            "font": "Fustat-Regular"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 15,
+          "id_if_published": null,
+          "text_characters": 409,
+          "text_sha256_utf8": "2bef2a43bb609b58309ee5d6939e86b63519dd9da344f1620f75f127bd42e6c4",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 808,
+          "image_height": 488,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoKufiArabic-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 16,
+          "id_if_published": null,
+          "text_characters": 735,
+          "text_sha256_utf8": "a313d5003e78c468ec85fab2947393bf928a2856fcdc34bba19775f91a267bc8",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1234,
+          "image_height": 750,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoSansArabic_Condensed-Black"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 17,
+          "id_if_published": null,
+          "text_characters": 449,
+          "text_sha256_utf8": "2751907a42783e4cae95b5d76e589bb8c891cf2b9ccad17f346125284afc0ea8",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1489,
+          "image_height": 376,
+          "metadata": {
+            "contains_title": true,
+            "font": "NotoKufiArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 18,
+          "id_if_published": null,
+          "text_characters": 434,
+          "text_sha256_utf8": "b25d5116cdd4e05d5a5c35f3088c1d809aa7ecbe469b7434c35c50033600901f",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1013,
+          "image_height": 591,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoSansArabic_ExtraCondensed-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 19,
+          "id_if_published": null,
+          "text_characters": 1020,
+          "text_sha256_utf8": "884a3796bf98072e1823ec11739e99023ffa64ecd557bec3fc5ae44111da5e72",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1670,
+          "image_height": 580,
+          "metadata": {
+            "contains_title": false,
+            "font": "NotoNaskhArabic-Medium"
+          },
+          "row_keys": [
+            "text",
+            "image",
+            "metadata"
+          ],
+          "truncated_cells": []
+        }
+      ]
+    },
+    "bench_test_rows": {
+      "num_rows_total": 251,
+      "sample_size": 20,
+      "features": [
+        {
+          "feature_idx": 0,
+          "name": "text",
+          "type": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        {
+          "feature_idx": 1,
+          "name": "image",
+          "type": {
+            "_type": "Image"
+          }
+        },
+        {
+          "feature_idx": 2,
+          "name": "id",
+          "type": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        }
+      ],
+      "partial": false,
+      "text_preserved_without_normalization": true,
+      "rows_with_newlines": 20,
+      "rows_with_truncated_cells": 0,
+      "text_length_min_median_max": [
+        47,
+        295.0,
+        514
+      ],
+      "all_observed_row_keys": [
+        "id",
+        "image",
+        "text"
+      ],
+      "all_observed_metadata_keys": [],
+      "rows": [
+        {
+          "row_idx": 0,
+          "id_if_published": "ff933af4-83db-4b37-9841-c131ec0e6961",
+          "text_characters": 476,
+          "text_sha256_utf8": "dcf36817b5503b7430179abf774b554dd435ddda0ff1833856f61169e43ab890",
+          "newline_count": 5,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1317,
+          "image_height": 568,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 1,
+          "id_if_published": "3d4cd5f4-fbc8-41bb-984e-758eff9ca14a",
+          "text_characters": 432,
+          "text_sha256_utf8": "d0a2acb562b63fdb10fa0b09fdaa0aba52fcde5fc38aaaac19a6240b75fd3b9b",
+          "newline_count": 5,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1317,
+          "image_height": 554,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 2,
+          "id_if_published": "3cb50058-41a0-47cb-a244-3eca5602f645",
+          "text_characters": 107,
+          "text_sha256_utf8": "8636b819b851849cb3ef3f7893a63c6c35efe6786848e3dfeb8e41832cafbd97",
+          "newline_count": 3,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 820,
+          "image_height": 397,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 3,
+          "id_if_published": "8efc7041-5ad5-445f-a628-2d2940d05d2b",
+          "text_characters": 454,
+          "text_sha256_utf8": "5102063596caf8fbea0ed4a133139e3cd374f8a5dfd6af832331e91ebe2b6400",
+          "newline_count": 5,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1270,
+          "image_height": 486,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 4,
+          "id_if_published": "688af521-e3b9-406d-b68b-81bfc9b06f50",
+          "text_characters": 319,
+          "text_sha256_utf8": "84582e9e2b7601eb3854dcbca6824bbe137000a568772d64903f25975b956bd5",
+          "newline_count": 3,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1320,
+          "image_height": 386,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 5,
+          "id_if_published": "df8ba21f-763e-4d65-a8a1-eaf59da8aa0b",
+          "text_characters": 217,
+          "text_sha256_utf8": "b9882e780741b3625517d140a4b050b9586cf33ce6c261b3d02a710bc4533854",
+          "newline_count": 2,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1318,
+          "image_height": 302,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 6,
+          "id_if_published": "79f38169-5439-4522-8727-cd5f81636ac5",
+          "text_characters": 50,
+          "text_sha256_utf8": "7bdc83b3528c1f1ad62480ca8cdaa241859d6af63c848ab7eb2bdc2da0e1e4ac",
+          "newline_count": 1,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 868,
+          "image_height": 308,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 7,
+          "id_if_published": "2e6f3fef-6ef9-4a72-962e-7733d62f9c8f",
+          "text_characters": 379,
+          "text_sha256_utf8": "d811749f2fc36641af25e94f4af26c68d076b8cc18b1b6bce53190849f01076e",
+          "newline_count": 4,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1287,
+          "image_height": 501,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 8,
+          "id_if_published": "bcce90c4-8e7b-4da3-b17a-5f07eca5bbf9",
+          "text_characters": 48,
+          "text_sha256_utf8": "a9f525296450d82292fd1c00a08a4f4b293836475bc4b8a7bb497f00db5e9241",
+          "newline_count": 1,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 713,
+          "image_height": 329,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 9,
+          "id_if_published": "2ec437c0-fd3d-440a-9a25-7bdeedb6a9fb",
+          "text_characters": 302,
+          "text_sha256_utf8": "a9929160fe6502197d50bff0c46dfc06314c86cf316bc6586cb1742a8e692fec",
+          "newline_count": 4,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1300,
+          "image_height": 323,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 10,
+          "id_if_published": "13d24f31-b1ce-4157-93b2-327f0868c8a5",
+          "text_characters": 288,
+          "text_sha256_utf8": "20140c48c96e6247ffe7b980b308b7fe4a4d0d4284449cf8b485713fb67c2b7f",
+          "newline_count": 4,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1285,
+          "image_height": 401,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 11,
+          "id_if_published": "122da01f-894f-4e6a-8a42-d7dd46acfc77",
+          "text_characters": 495,
+          "text_sha256_utf8": "628b1231a1f130c9079e818c54e291cea63dd95790ce6cd531fa2c7c87fcb494",
+          "newline_count": 6,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1269,
+          "image_height": 563,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 12,
+          "id_if_published": "a458fc6a-0986-4b20-a6ee-aac20418d475",
+          "text_characters": 472,
+          "text_sha256_utf8": "0af2cf7b15d12f6e21631eda7657b226c5085362fc44e0b8f7883cb5b115dec1",
+          "newline_count": 5,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1319,
+          "image_height": 593,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 13,
+          "id_if_published": "1a57e928-e725-4531-81a3-103c1aa0b70c",
+          "text_characters": 218,
+          "text_sha256_utf8": "b1ff15fe148ecf196da820675533bf810ff5c3dd5ac825aabe9b2341067ceba7",
+          "newline_count": 2,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1319,
+          "image_height": 305,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 14,
+          "id_if_published": "49080db0-57da-4451-8c58-3c7815b00d84",
+          "text_characters": 47,
+          "text_sha256_utf8": "c4493aeb8d37b25abfc8ceb55228a95a07010ab1049813fc75d6a989737e55db",
+          "newline_count": 1,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 750,
+          "image_height": 314,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 15,
+          "id_if_published": "27f8ef19-7b56-4ba3-82bd-95044de5b47d",
+          "text_characters": 514,
+          "text_sha256_utf8": "72ea54a7b4d3fa7d9376f64651f8a4abeb8fe0bca40e5c622d3eb4fcbc4fa22c",
+          "newline_count": 6,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1303,
+          "image_height": 567,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 16,
+          "id_if_published": "443130d3-7f9c-4775-a18d-e94649db4e36",
+          "text_characters": 91,
+          "text_sha256_utf8": "d89340818b3977261cb590c29779d81c3ced419440aaf16ceadf88683d499bf6",
+          "newline_count": 6,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 742,
+          "image_height": 462,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 17,
+          "id_if_published": "91c0804e-d67b-44e6-ae0f-8e8d91fec1bf",
+          "text_characters": 253,
+          "text_sha256_utf8": "5c2b0cf6aee448b346eb7892c857ec4931503185977780be6ce555176a93cdb6",
+          "newline_count": 3,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1303,
+          "image_height": 401,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 18,
+          "id_if_published": "7eb65175-15a9-41d5-88df-f5d000e49a88",
+          "text_characters": 87,
+          "text_sha256_utf8": "bdb85b286b921ff15f6b84fd05a5e5eba8e77aabed0a5062231c75b1f2e52bb6",
+          "newline_count": 1,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1196,
+          "image_height": 302,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 19,
+          "id_if_published": "6ce0a994-523a-45d6-90f1-5d46173bfa49",
+          "text_characters": 317,
+          "text_sha256_utf8": "63f5fa3c0340db11b52c8f4b4cfd71338ba46121033708c0b5e2577fcbd8c4e7",
+          "newline_count": 4,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1269,
+          "image_height": 376,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        }
+      ]
+    },
+    "bench_test_offset55_rows": {
+      "num_rows_total": 251,
+      "sample_size": 20,
+      "features": [
+        {
+          "feature_idx": 0,
+          "name": "text",
+          "type": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        {
+          "feature_idx": 1,
+          "name": "image",
+          "type": {
+            "_type": "Image"
+          }
+        },
+        {
+          "feature_idx": 2,
+          "name": "id",
+          "type": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        }
+      ],
+      "partial": false,
+      "text_preserved_without_normalization": true,
+      "rows_with_newlines": 0,
+      "rows_with_truncated_cells": 0,
+      "text_length_min_median_max": [
+        129,
+        461.0,
+        1076
+      ],
+      "all_observed_row_keys": [
+        "id",
+        "image",
+        "text"
+      ],
+      "all_observed_metadata_keys": [],
+      "rows": [
+        {
+          "row_idx": 55,
+          "id_if_published": "f9fd42d6-6e24-4991-bf7b-61ceebf439ad",
+          "text_characters": 650,
+          "text_sha256_utf8": "6a6e7c043c0248bc419ecec1506bfb6505edc84492e55e19b42d1db501da88a8",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 880,
+          "image_height": 713,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 56,
+          "id_if_published": "023810d8-3bbe-4450-aab4-bccb30ead01f",
+          "text_characters": 473,
+          "text_sha256_utf8": "4fc7587779d7cb4dc59fedf8ab2e85235973e4d67f5c74e20f1f96ac98204cfb",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1231,
+          "image_height": 600,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 57,
+          "id_if_published": "a5cbd409-5bc1-45ff-b4c1-37d93b889bc4",
+          "text_characters": 536,
+          "text_sha256_utf8": "09cd1b21e739f9345555b5e4cfbfcb6f62e8870cfa14d09fa0ddcbb08c1d55a1",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1583,
+          "image_height": 415,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 58,
+          "id_if_published": "4709818a-b5c4-41ce-aa01-6dfe68abdf79",
+          "text_characters": 241,
+          "text_sha256_utf8": "7824e9a00049a8383c39f9137ce4b9c69f3218ab6ed9835ef8b860884cf05d08",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 871,
+          "image_height": 341,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 59,
+          "id_if_published": "95203634-8dbc-4cb5-b9e5-d2744d028760",
+          "text_characters": 229,
+          "text_sha256_utf8": "c595e4c1eb6796015b295650d434d0c1ae78a82659decf07e964ec0c68fef1a2",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1639,
+          "image_height": 225,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 60,
+          "id_if_published": "1d47c815-b9f8-47b9-9410-d8b554dc0f93",
+          "text_characters": 1076,
+          "text_sha256_utf8": "7dae97b90217a2bd5ec7b11423106cf5053ff7f3cf269866044b5f31be7d20ce",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1569,
+          "image_height": 831,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 61,
+          "id_if_published": "8eb30348-01d3-476a-bdce-70a6d0508caf",
+          "text_characters": 129,
+          "text_sha256_utf8": "0f10f136590fd45a988a30aa4098f2b8d530161220d1d32362aa48590c6df552",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1111,
+          "image_height": 158,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 62,
+          "id_if_published": "91f74569-f99e-4fe0-9422-0587b5440269",
+          "text_characters": 196,
+          "text_sha256_utf8": "9320b5591d77b7216d61004c0e0b3c8ff20e644a3c252544c652c1b39da00b14",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 863,
+          "image_height": 366,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 63,
+          "id_if_published": "44ea4ef4-e841-4c5f-a285-9cb1f99201dd",
+          "text_characters": 958,
+          "text_sha256_utf8": "27975ed21a83f7bef238c8cde8377b73a9d5eecf2dbd664072e1f531a0f12451",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1753,
+          "image_height": 620,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 64,
+          "id_if_published": "14714240-5d20-43b4-bae1-47736edb9a81",
+          "text_characters": 610,
+          "text_sha256_utf8": "29752148bbdccdafe31285f27ddc2de373d816899cb86b268390e53d8f65ed0a",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 911,
+          "image_height": 652,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 65,
+          "id_if_published": "de0c8389-a764-47ec-8325-cd48c40732fd",
+          "text_characters": 350,
+          "text_sha256_utf8": "46c1be1c1b522a6bcfebe62a5b9f5e79b73727fe6ef405d8b03e1ac0d473a40c",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 907,
+          "image_height": 662,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 66,
+          "id_if_published": "8ba77882-f08b-4210-aaa5-86ba20e530d5",
+          "text_characters": 610,
+          "text_sha256_utf8": "50664dca31c213d471be7a4ca2d0c538bbf92cfedbab23f31cd445a65df9f843",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1548,
+          "image_height": 555,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 67,
+          "id_if_published": "f7758062-9ec2-4cb3-bcb2-cb4c594691db",
+          "text_characters": 259,
+          "text_sha256_utf8": "cbd1ea52dc5637498a41a2ef56e6431adfc7144d3a73a5d8bf5530c9697665f7",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 779,
+          "image_height": 356,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 68,
+          "id_if_published": "705fb3ce-2a33-409e-a82b-f41413485ccd",
+          "text_characters": 509,
+          "text_sha256_utf8": "fe543d00b3d141e276727e13f4b6bf89f94c9765840c7b6f92fe019db4ed6a08",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1004,
+          "image_height": 611,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 69,
+          "id_if_published": "02b8342c-ca28-4379-b91b-055da5893d62",
+          "text_characters": 241,
+          "text_sha256_utf8": "672661c029326a337fbec513f39ee8cb18a172ef34b556d26910c3a5877ddf18",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1075,
+          "image_height": 317,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 70,
+          "id_if_published": "f70fec6a-a2ea-46d3-a6fd-77f743e443ec",
+          "text_characters": 409,
+          "text_sha256_utf8": "2bef2a43bb609b58309ee5d6939e86b63519dd9da344f1620f75f127bd42e6c4",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 808,
+          "image_height": 488,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 71,
+          "id_if_published": "39464bb9-8a87-445c-971c-6e352b2c41f5",
+          "text_characters": 735,
+          "text_sha256_utf8": "a313d5003e78c468ec85fab2947393bf928a2856fcdc34bba19775f91a267bc8",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1234,
+          "image_height": 750,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 72,
+          "id_if_published": "9c9fe074-3fda-483d-bf8f-a6e491591529",
+          "text_characters": 449,
+          "text_sha256_utf8": "2751907a42783e4cae95b5d76e589bb8c891cf2b9ccad17f346125284afc0ea8",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1489,
+          "image_height": 376,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 73,
+          "id_if_published": "0952c0db-d00f-40f9-a350-7cfb112202da",
+          "text_characters": 434,
+          "text_sha256_utf8": "b25d5116cdd4e05d5a5c35f3088c1d809aa7ecbe469b7434c35c50033600901f",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1013,
+          "image_height": 591,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        },
+        {
+          "row_idx": 74,
+          "id_if_published": "b5d28de0-b390-4107-8fdc-34921a0c5f24",
+          "text_characters": 1020,
+          "text_sha256_utf8": "884a3796bf98072e1823ec11739e99023ffa64ecd557bec3fc5ae44111da5e72",
+          "newline_count": 0,
+          "carriage_return_count": 0,
+          "unicode_line_separator_count": 0,
+          "unicode_paragraph_separator_count": 0,
+          "literal_backslash_n_count": 0,
+          "image_width": 1670,
+          "image_height": 580,
+          "metadata": null,
+          "row_keys": [
+            "text",
+            "image",
+            "id"
+          ],
+          "truncated_cells": []
+        }
+      ]
+    }
+  },
+  "raw_text_audit": {
+    "train_validation_rows_inspected": 40,
+    "rows_with_lf": 0,
+    "rows_with_cr": 0,
+    "rows_with_unicode_separators": 0,
+    "normalization_applied": false,
+    "line_breaks_were_not_stripped": true
+  },
+  "supervision_findings": {
+    "published_line_bounding_boxes": false,
+    "published_word_bounding_boxes": false,
+    "published_per_line_text_field": false,
+    "published_source_document_id_in_training_schema": false,
+    "training_metadata_fields": [
+      "contains_title",
+      "font"
+    ],
+    "synthetic_boxes_claim_in_card": "Card describes OCRSmith generating bounding boxes, but the released schema/tree exposes no boxes or sidecar annotation files.",
+    "newline_conclusion": "None of the inspected train/validation strings contain LF/CR/Unicode line separators. This is an observation on the bounded sample, not a claim that every dataset row lacks newlines.",
+    "ctc_readiness": "Not directly usable as line-image/line-text pairs. Multi-line pictures plus flat transcriptions require verified alignment, upstream layout annotations, or controlled regeneration."
+  },
+  "licensing": {
+    "data_announced": "Apache 2.0 badge in dataset README; no license YAML field or standalone license file at inspected revision.",
+    "benchmark_announced": "README licensing section explicitly says Apache 2.0; no standalone license file at inspected revision.",
+    "source_provenance": "Authors describe synthetic OCRSmith data and real-world book/social/education/cookbook data with Gemini pseudo-labeling and human correction. These are source-card claims, not independently revalidated annotation quality.",
+    "attribution": "Imane Momayiz, Soufiane Ait Elaouad, Abdeljalil Elmajjodi, Haitame Bouanane; AtlasIA, AtlasOCR, 2025. Benchmark additionally credits Zaid Chiech."
+  },
+  "test_benchmark_overlap_sample": {
+    "bench_test_rows": {
+      "left_rows": 20,
+      "right_rows": 20,
+      "matched_pairs": [],
+      "num_exact_text_matched_pairs": 0,
+      "proves_full_split_identity": false,
+      "method": "SHA-256 of exact unnormalized UTF-8 reference text; dimensions compared, no OCR predictions or error analysis."
+    },
+    "bench_test_offset55_rows": {
+      "left_rows": 20,
+      "right_rows": 20,
+      "matched_pairs": [
+        {
+          "data_test_row_idx": 0,
+          "benchmark_row_idx": 55,
+          "benchmark_id": "f9fd42d6-6e24-4991-bf7b-61ceebf439ad",
+          "exact_text_sha256_utf8": "6a6e7c043c0248bc419ecec1506bfb6505edc84492e55e19b42d1db501da88a8",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 1,
+          "benchmark_row_idx": 56,
+          "benchmark_id": "023810d8-3bbe-4450-aab4-bccb30ead01f",
+          "exact_text_sha256_utf8": "4fc7587779d7cb4dc59fedf8ab2e85235973e4d67f5c74e20f1f96ac98204cfb",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 2,
+          "benchmark_row_idx": 57,
+          "benchmark_id": "a5cbd409-5bc1-45ff-b4c1-37d93b889bc4",
+          "exact_text_sha256_utf8": "09cd1b21e739f9345555b5e4cfbfcb6f62e8870cfa14d09fa0ddcbb08c1d55a1",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 3,
+          "benchmark_row_idx": 58,
+          "benchmark_id": "4709818a-b5c4-41ce-aa01-6dfe68abdf79",
+          "exact_text_sha256_utf8": "7824e9a00049a8383c39f9137ce4b9c69f3218ab6ed9835ef8b860884cf05d08",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 4,
+          "benchmark_row_idx": 59,
+          "benchmark_id": "95203634-8dbc-4cb5-b9e5-d2744d028760",
+          "exact_text_sha256_utf8": "c595e4c1eb6796015b295650d434d0c1ae78a82659decf07e964ec0c68fef1a2",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 5,
+          "benchmark_row_idx": 60,
+          "benchmark_id": "1d47c815-b9f8-47b9-9410-d8b554dc0f93",
+          "exact_text_sha256_utf8": "7dae97b90217a2bd5ec7b11423106cf5053ff7f3cf269866044b5f31be7d20ce",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 6,
+          "benchmark_row_idx": 61,
+          "benchmark_id": "8eb30348-01d3-476a-bdce-70a6d0508caf",
+          "exact_text_sha256_utf8": "0f10f136590fd45a988a30aa4098f2b8d530161220d1d32362aa48590c6df552",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 7,
+          "benchmark_row_idx": 62,
+          "benchmark_id": "91f74569-f99e-4fe0-9422-0587b5440269",
+          "exact_text_sha256_utf8": "9320b5591d77b7216d61004c0e0b3c8ff20e644a3c252544c652c1b39da00b14",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 8,
+          "benchmark_row_idx": 63,
+          "benchmark_id": "44ea4ef4-e841-4c5f-a285-9cb1f99201dd",
+          "exact_text_sha256_utf8": "27975ed21a83f7bef238c8cde8377b73a9d5eecf2dbd664072e1f531a0f12451",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 9,
+          "benchmark_row_idx": 64,
+          "benchmark_id": "14714240-5d20-43b4-bae1-47736edb9a81",
+          "exact_text_sha256_utf8": "29752148bbdccdafe31285f27ddc2de373d816899cb86b268390e53d8f65ed0a",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 10,
+          "benchmark_row_idx": 65,
+          "benchmark_id": "de0c8389-a764-47ec-8325-cd48c40732fd",
+          "exact_text_sha256_utf8": "46c1be1c1b522a6bcfebe62a5b9f5e79b73727fe6ef405d8b03e1ac0d473a40c",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 11,
+          "benchmark_row_idx": 66,
+          "benchmark_id": "8ba77882-f08b-4210-aaa5-86ba20e530d5",
+          "exact_text_sha256_utf8": "50664dca31c213d471be7a4ca2d0c538bbf92cfedbab23f31cd445a65df9f843",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 12,
+          "benchmark_row_idx": 67,
+          "benchmark_id": "f7758062-9ec2-4cb3-bcb2-cb4c594691db",
+          "exact_text_sha256_utf8": "cbd1ea52dc5637498a41a2ef56e6431adfc7144d3a73a5d8bf5530c9697665f7",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 13,
+          "benchmark_row_idx": 68,
+          "benchmark_id": "705fb3ce-2a33-409e-a82b-f41413485ccd",
+          "exact_text_sha256_utf8": "fe543d00b3d141e276727e13f4b6bf89f94c9765840c7b6f92fe019db4ed6a08",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 14,
+          "benchmark_row_idx": 69,
+          "benchmark_id": "02b8342c-ca28-4379-b91b-055da5893d62",
+          "exact_text_sha256_utf8": "672661c029326a337fbec513f39ee8cb18a172ef34b556d26910c3a5877ddf18",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 15,
+          "benchmark_row_idx": 70,
+          "benchmark_id": "f70fec6a-a2ea-46d3-a6fd-77f743e443ec",
+          "exact_text_sha256_utf8": "2bef2a43bb609b58309ee5d6939e86b63519dd9da344f1620f75f127bd42e6c4",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 16,
+          "benchmark_row_idx": 71,
+          "benchmark_id": "39464bb9-8a87-445c-971c-6e352b2c41f5",
+          "exact_text_sha256_utf8": "a313d5003e78c468ec85fab2947393bf928a2856fcdc34bba19775f91a267bc8",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 17,
+          "benchmark_row_idx": 72,
+          "benchmark_id": "9c9fe074-3fda-483d-bf8f-a6e491591529",
+          "exact_text_sha256_utf8": "2751907a42783e4cae95b5d76e589bb8c891cf2b9ccad17f346125284afc0ea8",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 18,
+          "benchmark_row_idx": 73,
+          "benchmark_id": "0952c0db-d00f-40f9-a350-7cfb112202da",
+          "exact_text_sha256_utf8": "b25d5116cdd4e05d5a5c35f3088c1d809aa7ecbe469b7434c35c50033600901f",
+          "same_image_dimensions": true
+        },
+        {
+          "data_test_row_idx": 19,
+          "benchmark_row_idx": 74,
+          "benchmark_id": "b5d28de0-b390-4107-8fdc-34921a0c5f24",
+          "exact_text_sha256_utf8": "884a3796bf98072e1823ec11739e99023ffa64ecd557bec3fc5ae44111da5e72",
+          "same_image_dimensions": true
+        }
+      ],
+      "num_exact_text_matched_pairs": 20,
+      "proves_full_split_identity": false,
+      "method": "SHA-256 of exact unnormalized UTF-8 reference text; dimensions compared, no OCR predictions or error analysis."
+    }
+  },
+  "overlap_policy": "Reserve atlasOCR-data/test (196) and all AtlasOCRBench (251) regardless of sampled overlap; deduplicate candidate train/validation against frozen held-out sets by original image hashes and normalized transcripts before adaptation.",
+  "safe_next_steps": [
+    "Prefer obtaining original OCRSmith line/word bounding boxes plus exact rendered line strings at a pinned source revision; they are absent from the released Hugging Face schema.",
+    "Alternatively regenerate new synthetic single-line images using atlasOCR-data/train strings only, preserving the exact emitted Unicode text and recording renderer/font/bidi/seed/source-row provenance. This is newly generated data, not recovered original line ground truth.",
+    "For existing multi-line images, detect geometric line candidates, remove decorative rules and assign top-to-bottom reading order. Use model proposals and constrained monotonic text alignment only as suggestions; manually verify each crop and transcription before accepting supervised line pairs.",
+    "Keep validation source pages separate before deriving crops, manually annotate validation line pairs, quarantine ambiguous/title/multicolumn/missing-text cases, and never distribute flat paragraph text across crops by equal word counts or guessed wrapping.",
+    "If verified per-line labels cannot be recovered, retain the page/paragraph supervision and use a recognizer designed for multi-line sequence decoding rather than presenting guesses as line ground truth."
+  ],
+  "sampled_images": [
+    {
+      "sample": "train_rows",
+      "row_idx": 0,
+      "path": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\train_rows_00000.jpg",
+      "width": 1035,
+      "height": 527,
+      "url": "https://datasets-server.huggingface.co/cached-assets/atlasia/atlasOCR-data/--/9ecbcbb8c964057f7635ac33032fb89117612154/--/default/train/0/image/image.jpg?Expires=1793465833&Signature=gKgTJM3we6msr3l8~Mke22n~TmaDHibXVtsJWhe6mpLb3aI6kcehd0PksHPujhhbenh0N6Tz6HhGdaXy3O2RpiQOYQo7Q5RL124kLNdjG5lHfJbbUBcG6JCAdEGnmrpZkIsVxZPl-HANju~2VfO85s1Wq0JBwGkS2OX3YhwciFBuDs4PKwXGPQBHGFvz0vQB6mVZuwz~Prx5BxOlkGPwNGtVjUJKADgmR3SxvGxC--qXuG07ifUb6chQ9T4k65QeOHbRtTmNrD9RsyYTptizLR7y0UyaCeCW4YDbYZFcoPLcXs7fKILHWMK1Zec8ccnheFm74ld9qgCGuH0wnPGvIg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:41.533458+00:00",
+      "bytes": 55611,
+      "sha256": "fbeba4ba71a628c7f929cde8d0ca84116bd7a6a604a86f962c52e7a72df57539",
+      "etag": "\"312f84199ade4fddbe49558f10f9d027\""
+    },
+    {
+      "sample": "train_rows",
+      "row_idx": 7,
+      "path": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\train_rows_00007.jpg",
+      "width": 918,
+      "height": 594,
+      "url": "https://datasets-server.huggingface.co/cached-assets/atlasia/atlasOCR-data/--/9ecbcbb8c964057f7635ac33032fb89117612154/--/default/train/7/image/image.jpg?Expires=1793465833&Signature=UvLcEHDMeA9nfSyMEfSYGSWSSe0fbhr7q71CsyGuSZKQ6hlQFbf7hZ49JD8taXIwHW-y~ICcLSzeE32BCFofzS0Ubz8CFItujy5J5F4nylvYtrKxuR7jLU-01XE4rUzLQRvM-zRNMNynu4LwqVksAkl9PaRqMy2aokoYpvFkU6f6SykshYt5Q3kYyCW~1hQA54gCLGk4~3JAyiwSIlGqK4Rj5XYGPhidr4Pb3zwpRXC~qo8S0C6qdGlnzAQc~YCSOtx0NJQ0Fn7XbsA6-7fMx7Ilyp7Ofm6znYGLIlF7eU-N9IIUIBNmJ06ijJnpwXfgLx9ZxDRfjOo92DVEoncbbA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:41.675853+00:00",
+      "bytes": 85860,
+      "sha256": "4cb353cfb1333f88230bfe49171a09712439daf42d29cae76f17673730639eb3",
+      "etag": "\"3296ff48775392e06324181558ca3134\""
+    },
+    {
+      "sample": "validation_rows",
+      "row_idx": 2,
+      "path": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\validation_rows_00002.jpg",
+      "width": 817,
+      "height": 632,
+      "url": "https://datasets-server.huggingface.co/cached-assets/atlasia/atlasOCR-data/--/9ecbcbb8c964057f7635ac33032fb89117612154/--/default/validation/2/image/image.jpg?Expires=1793465832&Signature=rWbgZKS8D3ctX-DDrBt8I9SZ9-vPv8t1VOEEJDCQSThJICMf4hLn~s7qn29p6Q7RgkNiaXWuTHyUk9dj3Bblrcjwerzb41PmM88r4sXqGmLZlCzjdbv9FtSJwVzCu4duJ9YCE28Zb4e4YwsBhZPto4DtV4TbCTe5tN54sriVyYJCEKX4dh~JQH5WtZpU8lKGP~~nMyar2RS2BDgZISIUsIKGjq6dT1wlwQV5DeqLLh8pqzhW7F9I5hHfSIntUHvVtXMwdF~9amNEez1JNhiNLFO3yai0wfqr9VqXQtgczeQzU-s5nunabAFqZGN9Po4N-WUdh6eR2Xy2brZghAIERw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:41.831488+00:00",
+      "bytes": 64955,
+      "sha256": "402a69bb32304178c35dc7bb5e6ac64f49df41eefccff61e702b38660cef42e3",
+      "etag": "\"3482f69eb9549b6bd9e366489d99fb2c\""
+    },
+    {
+      "sample": "validation_rows",
+      "row_idx": 9,
+      "path": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\validation_rows_00009.jpg",
+      "width": 1562,
+      "height": 118,
+      "url": "https://datasets-server.huggingface.co/cached-assets/atlasia/atlasOCR-data/--/9ecbcbb8c964057f7635ac33032fb89117612154/--/default/validation/9/image/image.jpg?Expires=1793465832&Signature=SjPLiqYlAzEr7XIbrQXvxYO0q-8XXtwN6XYn0Nyj3RW6sKVlzxc9bMI92TxWDR4MrXOiZNCDpMUGeKc0oLWkm3Am42wPoOKgSrgO~tNPVxM8lsY5Nlg8ZPdBs0AeF7TmEI0BQWnbraMArVBjW1LZeP5Egx0Y6QCs6qEt9H15-Yq7eXKql~UZbtRV31ZCrBOgJTmBzsHcOH1XppNAEtbyi8VCnji~gwmZE8fHM3RShTuh0jiTW3VS~FCsFRcDBmx8LYjDy3gJ5MOVkJYD6JsliFAjt6qxdyYsHMB7fE3IWC-u1fKBiqSStzFUgcLXrQu~dHdo1ysiCqAATy0ilU2uag__&Key-Pair-Id=K3C0L9WB6U5DUC",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:41.952652+00:00",
+      "bytes": 49579,
+      "sha256": "7e973a81f570b9cb62689ac0df2b807b0fb2460016fa9178b8ea3511e4906e62",
+      "etag": "\"825f0d8e2326502a109a2aef204b2491\""
+    },
+    {
+      "sample": "data_test_rows",
+      "row_idx": 0,
+      "path": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\data_test_rows_00000.jpg",
+      "width": 880,
+      "height": 713,
+      "url": "https://datasets-server.huggingface.co/cached-assets/atlasia/atlasOCR-data/--/9ecbcbb8c964057f7635ac33032fb89117612154/--/default/test/0/image/image.jpg?Expires=1793465858&Signature=v93CQ~vtDXnrvA9X3M0GSQfOq8aWGRKDeuRA28Zj7T1pfG26J10C10hl1etyAbqcZkXi49NerQt0Br-lqh1BWdiDBNv9iXGQ0aoOHFgneJhNWL6Ex3NIGgv2ldCQrlkiknPYqwr8ZSSGdcYuBMDzDW8prkpbh-HrbhbXEfBYy1BseQggT8Jl0VGfKaf4TVz30WS7FYgwp5lJmprUlu5mSTrbgxKhmxJI0Kq8gedbySGzJYvzNw4DEjOjGBFNp4Q3s-j9VFd2PxXOb-i3g8Ic8xvzrt771znnXabxnnCLy2kr--RecaKH-utuVB1ph253MbDppSE6Rf8C5dS6IMZJ3A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:42.200560+00:00",
+      "bytes": 63609,
+      "sha256": "61c5f09b7eadf275c52a594050afde6fa878915d849ee1b9c0fa40c3630501e6",
+      "etag": "\"feaa9514567ad88f44d275c0d3fc3d72\""
+    },
+    {
+      "sample": "bench_test_offset55_rows",
+      "row_idx": 55,
+      "path": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\bench_test_offset55_rows_00055.jpg",
+      "width": 880,
+      "height": 713,
+      "url": "https://datasets-server.huggingface.co/cached-assets/atlasia/AtlasOCRBench/--/1e860eb5c22cbb3cc43ffa721ab36029e6849db3/--/default/test/55/image/image.jpg?Expires=1793465836&Signature=uwOVd5FKspTz4OvLpSWoqqkgoG0DMrzJ~vUqFukFRBTWAy6OsHltQzQ5yHXtk5hAggzbeWVe6iUduyD30MTpGSw9NQHcaKrxA0nURQT6rSn39fvXBAxWOPPuyV4FaKz3bRf-~aOAGdKO~y4AInj85bIb0fgsGzIUGD2drvn1tpICoBQVeHHHjdFw-REswVf~EZ9YuPmSW~Guuep4nt1OQ35jGB9nGp-xs50alYfMBmEj8k9RUUlyhORS7MJ063FkF54udcbW9xDDOUuonGIvpFXlOoKxOJpg5HKb56eZgnFAs28LVqefBWUjfh3RsiwPa1aFXIABszW1LsC~c94Jog__&Key-Pair-Id=K3C0L9WB6U5DUC",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:42.484874+00:00",
+      "bytes": 63609,
+      "sha256": "61c5f09b7eadf275c52a594050afde6fa878915d849ee1b9c0fa40c3630501e6",
+      "etag": "\"feaa9514567ad88f44d275c0d3fc3d72\""
+    }
+  ],
+  "evidence_sources": [
+    {
+      "url": "https://huggingface.co/api/datasets/atlasia/atlasOCR-data",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:12.810126+00:00",
+      "bytes": 3509,
+      "sha256": "7a0068e67fc25da1f2fa1b8e7a8d28eb099e5ce1017708942bed1df40950b272",
+      "etag": "W/\"db5-GMVFTGLZtP/cvOHpgVZ7A1gZAP8\"",
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\data_metadata.json"
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/atlasia/atlasOCR-data/tree/9ecbcbb8c964057f7635ac33032fb89117612154?recursive=true&expand=false",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:13.076939+00:00",
+      "bytes": 10166,
+      "sha256": "a56ee9be4c40de859f1a94ffd19b061e34b4c47a3c7edaa5c6e913154c626c27",
+      "etag": "W/\"27b6-KCWw/N5OGFieSxC0mtODXn2EtD0\"",
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\data_tree_pinned.json"
+    },
+    {
+      "url": "https://huggingface.co/datasets/atlasia/atlasOCR-data/raw/9ecbcbb8c964057f7635ac33032fb89117612154/README.md",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:13.310809+00:00",
+      "bytes": 5353,
+      "sha256": "073e83cdde639785477f9df21aeb05ed37587fc4f12f53dfa3572894ebda437f",
+      "etag": "\"26305b7e80042104ad98d153e4bdcde60405d4ee\"",
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\data_readme_pinned.md"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/splits?dataset=atlasia%2FatlasOCR-data",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:13.686029+00:00",
+      "bytes": 254,
+      "sha256": "8b27badc143e45671ee04e7e93dbc9f2d0982f8b3777110312203d7dfe8e8a97",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\data_splits.json"
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/atlasia/AtlasOCRBench",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:13.875495+00:00",
+      "bytes": 1637,
+      "sha256": "053d09d6ff0b41be4c57690aa62135eb2051b9cf70beffc2efd7355f41ee55a7",
+      "etag": "W/\"665-HgmQ6pdNjm/UO4tlg7QbbukDx2o\"",
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\bench_metadata.json"
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/atlasia/AtlasOCRBench/tree/1e860eb5c22cbb3cc43ffa721ab36029e6849db3?recursive=true&expand=false",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:14.124771+00:00",
+      "bytes": 606,
+      "sha256": "7ff345bfb1cc642baef89767f451d208ad08555b4f1cf4c6b0217150be18d77b",
+      "etag": "W/\"25e-0HZ6WgdN/5HInGNIsC5fp/uA4XY\"",
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\bench_tree_pinned.json"
+    },
+    {
+      "url": "https://huggingface.co/datasets/atlasia/AtlasOCRBench/raw/1e860eb5c22cbb3cc43ffa721ab36029e6849db3/README.md",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:14.347235+00:00",
+      "bytes": 5361,
+      "sha256": "33ab9738bb82923ad9c91d0d8972e84d5cd3f6ffe21e96e5eb4688160afecf73",
+      "etag": "\"0dd50dccd2d682e5be9cd5b50a2cb4f7091e3c41\"",
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\bench_readme_pinned.md"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/splits?dataset=atlasia%2FAtlasOCRBench",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:14.540371+00:00",
+      "bytes": 107,
+      "sha256": "f0d52ac395fb2dc5fbbc5ef56debfe195b7499b15d860e01d34c1646dc5cb303",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\bench_splits.json"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=atlasia%2FatlasOCR-data&config=default&split=train&offset=0&length=20",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:16.106861+00:00",
+      "bytes": 31227,
+      "sha256": "5549ea5d0a8065a0da2ca662aef6e318b8610ecc4e605bea9284c5bdd3854fb2",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\train_rows_20.json"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=atlasia%2FatlasOCR-data&config=default&split=validation&offset=0&length=20",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:15.227763+00:00",
+      "bytes": 28793,
+      "sha256": "47e91e5493aff875e4bf56834ad07bf28216b6ce12938f015dc562c6ea828f0b",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\validation_rows_20.json"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=atlasia%2FatlasOCR-data&config=default&split=test&offset=0&length=20",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:40.994172+00:00",
+      "bytes": 32433,
+      "sha256": "773cda52ce5664c07f25cb39777f068063125c7a3a0913f1510f18bde97e6136",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\data_test_rows_20.json"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=atlasia%2FAtlasOCRBench&config=default&split=test&offset=0&length=20",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:19.454033+00:00",
+      "bytes": 24006,
+      "sha256": "5b0d99d2af310fc7457b7ac55b94d4fbc56e49187a65370218ad958790d1fd36",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\bench_test_rows_20.json"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=atlasia%2FAtlasOCRBench&config=default&split=test&offset=55&length=20",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:18.754030+00:00",
+      "bytes": 31915,
+      "sha256": "c289887ccc9c61dc4d98e0d9bc6d64028c74d664b1d144507be873ca934763a7",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\bench_test_offset55_rows_20.json"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/size?dataset=atlasia%2FatlasOCR-data",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:41.212791+00:00",
+      "bytes": 1075,
+      "sha256": "517c98ae5c900ca2ae26b6f2dee8a8910187a14ccb8849f9796137bc22590a02",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\data_size.json"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/parquet?dataset=atlasia%2FatlasOCR-data",
+      "status": 200,
+      "fetched_utc": "2026-10-31T15:57:41.415542+00:00",
+      "bytes": 7413,
+      "sha256": "5d9d112d2ab63ffb2c814475dd2883be752ba1ec1e5c9820a6c66f50dc524bde",
+      "etag": null,
+      "snapshot": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\atlas_audit\\data_parquet.json"
+    }
+  ],
+  "limits": [
+    "Only first --rows train/validation and two bounded benchmark windows inspected; these may overrepresent synthetic data.",
+    "No full-corpus duplicate/provenance audit; no general claim of split independence.",
+    "Signed cached-asset URLs expire; refetch rows to recover new preview links at the recorded revision.",
+    "A newline, if present in another row, is not by itself verified alignment to a visual baseline.",
+    "Image cached previews may be transcoded; matched cached-file hashes corroborate sampled image identity but do not replace original-parquet byte hashing."
+  ],
+  "sampled_image_hash_matches": [
+    {
+      "left_sample": "data_test_rows",
+      "left_row_idx": 0,
+      "right_sample": "bench_test_offset55_rows",
+      "right_row_idx": 55,
+      "cached_file_sha256": "61c5f09b7eadf275c52a594050afde6fa878915d849ee1b9c0fa40c3630501e6",
+      "bytes": 63609
+    }
+  ],
+  "manual_visual_check": {
+    "inspector": "Codex visual inspection of cached previews via view_image",
+    "samples": [
+      {
+        "split": "train",
+        "row_idx": 0,
+        "finding": "Multiple visual lines and headings despite zero LF in exact reference text."
+      },
+      {
+        "split": "train",
+        "row_idx": 7,
+        "finding": "Title, decorative rule and multiple body text lines despite zero LF."
+      },
+      {
+        "split": "validation",
+        "row_idx": 2,
+        "finding": "Multiple text lines, headings and decorative rule despite zero LF."
+      },
+      {
+        "split": "validation",
+        "row_idx": 9,
+        "finding": "Three visual lines, reference text contains zero LF."
+      }
+    ],
+    "no_line_labels_generated": true
+  }
+}
