@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "samples": 1212,
+  "character_errors": 1305,
+  "word_errors": 1004,
+  "exact_lines": 626,
+  "independent_edit_distance": "Python dynamic programming",
+  "single_image_cli_matches_batched_prediction": true,
+  "predictions_sha256": "79c81d0028d40babd649123b8de6899073ba2f050d8e03855bfd70d64b4e81c8"
+}

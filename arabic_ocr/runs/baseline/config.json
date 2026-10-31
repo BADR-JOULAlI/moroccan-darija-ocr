@@ -1,0 +1,42 @@
+{
+  "data_dir": "..\\..\\work\\data\\gazette",
+  "run_dir": "runs\\baseline",
+  "epochs": 8,
+  "batch_size": 16,
+  "height": 64,
+  "max_width": 1600,
+  "hidden_size": 128,
+  "channels": 32,
+  "lr": 0.001,
+  "workers": 0,
+  "threads": 4,
+  "seed": 42,
+  "device": "cuda",
+  "no_amp": false,
+  "max_train_samples": 0,
+  "max_val_samples": 0,
+  "max_steps": 0,
+  "resume": "runs\\baseline\\last.pt",
+  "log_every": 100,
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "cudnn": 91900,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "gpu_total_gb": 7.933,
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "train_samples": 10357,
+  "validation_samples": 1160,
+  "parameters": 1940797,
+  "amp": true,
+  "normalization": "NFC + collapse whitespace; logical Unicode targets",
+  "ctc_blank": 0,
+  "reading_direction": "reverse valid CNN time axis before BiLSTM",
+  "manifest_sha256": {
+    "train": "6571d8aedf08846d9a07cea06e9315115ba7b181b2cd6aca1a470ad792b1feee",
+    "val": "747f486e42566f941a70e1067f7fa4d4913eb419650403ef5546b66f77b48a33"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "command": "python -m pytest -q outputs/arabic_ocr/tests/test_core.py",
+  "return_code": 0,
+  "passed": 14,
+  "failed": 0,
+  "skipped": 0,
+  "errors": 0,
+  "elapsed_seconds": 4.526,
+  "executed_at_utc": "2026-10-29T18:51:03.601918+00:00",
+  "output": "..............                                                           [100%]\n14 passed in 3.76s",
+  "stderr": ""
+}

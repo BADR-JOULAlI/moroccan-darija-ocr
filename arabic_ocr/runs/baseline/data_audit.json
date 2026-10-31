@@ -1,0 +1,442 @@
+{
+  "source": "https://zenodo.org/records/21702529",
+  "doi": "10.5281/zenodo.21702529",
+  "license": "CC BY 4.0",
+  "seed": 42,
+  "normalization": "Unicode NFC, then collapse all whitespace to single ASCII spaces; retain diacritics, tatweel and bidi marks",
+  "transcription_order": "Unicode logical order; recognition must account for Arabic right-to-left visual order",
+  "counts": {
+    "all": 12890,
+    "official_test": 1212,
+    "after_filename_exclusion": 11678,
+    "removed_test_content_overlap": 102,
+    "removed_val_content_overlap_from_train": 57,
+    "train_before_quality_quarantine": 10359,
+    "quarantined_train_rows": 2,
+    "train": 10357,
+    "val": 1160,
+    "test": 1212,
+    "vocabulary": 92,
+    "images": 12890
+  },
+  "split_method": "Fixed official test; remove non-test rows matching its normalized transcript or image SHA-256; group remaining rows by document+page, shuffle page groups with seed, allocate ~val_fraction to validation; remove train rows matching validation transcript or image SHA-256.",
+  "val_fraction_requested": 0.1,
+  "test_untouched": true,
+  "test_annotation_mismatches": [
+    {
+      "id": "1 (145)__page_020__region_004_line_0002.png",
+      "merged_text": "- الآراء التي يدلي بها المجلس الوطني طبقاً لأحكام البندين 1 و4 من المادة 3 من هذا القانون التنظيمي؛",
+      "official_test_text": "- الآراء التي يدلي بها المجلس الوطني طبقا لأحكام البندين 1 و4 من المادة 3 من هذا القانون التنظيمي؛"
+    },
+    {
+      "id": "1 (11)__page_021__region_001_line_0014.png",
+      "merged_text": "(١) مواطنا لتلك الدولة؛ أو",
+      "official_test_text": "(1) مواطنا لتلك الدولة؛ أو"
+    },
+    {
+      "id": "1 (11)__page_021__region_001_line_0015.png",
+      "merged_text": "(۱۱) لم يصبح مقيما بتلك الدولة فقط لغرض تقديم الخدمات.",
+      "official_test_text": "(11) لم يصبح مقيما بتلك الدولة فقط لغرض تقديم الخدمات."
+    },
+    {
+      "id": "1 (139)__page_007__region_001_line_0009.png",
+      "merged_text": "4) غير أنه، يمكن لدولة التنفيذ أن تسترجع من المحكوم عليه كلاً أو جزءاً مصاريف النقل.",
+      "official_test_text": "4) غير أنه، يمكن لدولة التنفيذ أن تسترجع من المحكوم عليه كلا أو جزءا مصاريف النقل."
+    },
+    {
+      "id": "1 (145)__page_011__region_001_line_0003.png",
+      "merged_text": "… والمستخدمين الذين تقتضي مهنهم استعمالها، وبوجه عام كل من يرغب في تعلمها؛",
+      "official_test_text": "... والمستخدمين الذين تقتضي مهنهم استعمالها، وبوجه عام كل من يرغب في تعلمها؛"
+    },
+    {
+      "id": "1 (169)__page_006__region_001_line_0019.png",
+      "merged_text": "أ) يدفع بدون تأخير لا مبرر له، وفقاً للنظام القانوني للطرف الذي اتخذ إجراء نزع الملكية؛",
+      "official_test_text": "أ) يدفع بدون تأخير لا مبرر له، وفقا للنظام القانوني للطرف الذي اتخذ إجراء نزع الملكية؛"
+    },
+    {
+      "id": "1 (11)__page_027__region_005_line_0001.png",
+      "merged_text": "6- لا تُعرض المتابعات المتعلقة بوجود أو صحة أو مبلغ دين ضريبي لدولة متعاقدة أمام المحاكم أو",
+      "official_test_text": "6- لا تعرض المتابعات المتعلقة بوجود أو صحة أو مبلغ دين ضريبي لدولة متعاقدة أمام المحاكم أو"
+    },
+    {
+      "id": "1 (11)__page_007__region_005_line_0008.png",
+      "merged_text": "ج) ممارسة أنشطة من قبل مقاولة في دولة متعاقدة، لمدة أو مدد تتجاوز في مجموعها 183 يوماً خلال أي",
+      "official_test_text": "ج) ممارسة أنشطة من قبل مقاولة في دولة متعاقدة، لمدة أو مدد تتجاوز في مجموعها 183 يوما خلال أي"
+    },
+    {
+      "id": "1 (11)__page_008__region_004_line_0007.png",
+      "merged_text": "مرتبطة ارتباطا وثيقا فيما بينها في المكانين، وظائف تكميلية تمثّل جزءا من عملية تجارية مترابطة.",
+      "official_test_text": "مرتبطة ارتباطا وثيقا فيما بينها في المكانين، وظائف تكميلية تمثل جزءا من عملية تجارية مترابطة."
+    },
+    {
+      "id": "1 (11)__page_027__region_006_line_0002.png",
+      "merged_text": "وتحوّل الدولة المتعاقدة الأخرى مبلغ الدين الضريبي إلى الدولة المذكورة أولا، فإن ذلك الدين الضريبي يتوقف",
+      "official_test_text": "وتحول الدولة المتعاقدة الأخرى مبلغ الدين الضريبي إلى الدولة المذكورة أولا، فإن ذلك الدين الضريبي يتوقف"
+    },
+    {
+      "id": "1 (11)__page_027__region_007_line_0001.png",
+      "merged_text": "8- لا تُفَسِّر مقتضيات هذه المادة، بأي حال، على أنها تفرض على دولة متعاقدة الالتزام:",
+      "official_test_text": "8- لا تفسر مقتضيات هذه المادة، بأي حال، على أنها تفرض على دولة متعاقدة الالتزام:"
+    },
+    {
+      "id": "1 (139)__page_003__region_001_line_0018.png",
+      "merged_text": "د - «المحكوم عليه»: كل شخص موضوع إدانة نهائية فوق تراب أحد الدولتين، ويوجد رهن الاعتقال.",
+      "official_test_text": "د - \"المحكوم عليه\": كل شخص موضوع إدانة نهائية فوق تراب أحد الدولتين، ويوجد رهن الاعتقال."
+    },
+    {
+      "id": "1 (145)__page_005__region_006_line_0001.png",
+      "merged_text": "تطبيقاً لأحكام الفقرة الأخيرة من الفصل 5 من الدستور، يحدد هذا القانون التنظيمي صلاحيات المجلس الوطني",
+      "official_test_text": "تطبيقا لأحكام الفقرة الأخيرة من الفصل 5 من الدستور، يحدد هذا القانون التنظيمي صلاحيات المجلس الوطني"
+    },
+    {
+      "id": "1 (145)__page_006__region_005_line_0002.png",
+      "merged_text": "طبقاً لأحكام البندين 1 و4 من المادة 3 أعلاه، داخل أجل شهر واحد من تاريخ الإحالة.",
+      "official_test_text": "طبقا لأحكام البندين 1 و4 من المادة 3 أعلاه، داخل أجل شهر واحد من تاريخ الإحالة."
+    },
+    {
+      "id": "1 (145)__page_006__region_006_line_0002.png",
+      "merged_text": "يرفع رئيس المجلس الوطني إلى جلالة الملك تقريراً سنوياً حول أنشطة المجلس الوطني، ثم يوجه نسخة منه إلى رئيس",
+      "official_test_text": "يرفع رئيس المجلس الوطني إلى جلالة الملك تقريرا سنويا حول أنشطة المجلس الوطني، ثم يوجه نسخة منه إلى رئيس"
+    },
+    {
+      "id": "1 (145)__page_007__region_004_line_0002.png",
+      "merged_text": "وعددهم ستة (6) أعضاء، يعينهم جلالة الملك اعتباراً لكفاءتهم ومؤهلاتهم العلمية والفكرية، وخبرتهم وتجربتهم المشهود",
+      "official_test_text": "وعددهم ستة (6) أعضاء، يعينهم جلالة الملك اعتبارا لكفاءتهم ومؤهلاتهم العلمية والفكرية، وخبرتهم وتجربتهم المشهود"
+    },
+    {
+      "id": "1 (145)__page_009__region_003_line_0004.png",
+      "merged_text": "العمومية المختصة، بعد دراستها والمصادقة عليها طبقاً لأحكام هذا القانون التنظيمي.",
+      "official_test_text": "العمومية المختصة، بعد دراستها والمصادقة عليها طبقا لأحكام هذا القانون التنظيمي."
+    },
+    {
+      "id": "1 (145)__page_010__region_003_line_0005.png",
+      "merged_text": "طبقاً لأحكام هذا القانون التنظيمي.",
+      "official_test_text": "طبقا لأحكام هذا القانون التنظيمي."
+    },
+    {
+      "id": "1 (145)__page_012__region_002_line_0004.png",
+      "merged_text": "المعنية، بعد دراستها والمصادقة عليها طبقاً لأحكام هذا القانون التنظيمي.",
+      "official_test_text": "المعنية، بعد دراستها والمصادقة عليها طبقا لأحكام هذا القانون التنظيمي."
+    },
+    {
+      "id": "1 (145)__page_012__region_003_line_0005.png",
+      "merged_text": "والهيئات العامة والخاصة المعنية، بعد دراستها والمصادقة عليها طبقاً لأحكام هذا القانون التنظيمي.",
+      "official_test_text": "والهيئات العامة والخاصة المعنية، بعد دراستها والمصادقة عليها طبقا لأحكام هذا القانون التنظيمي."
+    },
+    {
+      "id": "1 (145)__page_014__region_001_line_0005.png",
+      "merged_text": "- أربعة (4) أعضاء يختارون اعتباراً لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في",
+      "official_test_text": "- أربعة (4) أعضاء يختارون اعتبارا لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في"
+    },
+    {
+      "id": "1 (145)__page_014__region_002_line_0004.png",
+      "merged_text": "- ثلاثة (3) أعضاء يختارون اعتباراً لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في",
+      "official_test_text": "- ثلاثة (3) أعضاء يختارون اعتبارا لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في"
+    },
+    {
+      "id": "1 (145)__page_014__region_003_line_0004.png",
+      "merged_text": "- خمسة (5) أعضاء يختارون اعتباراً لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في",
+      "official_test_text": "- خمسة (5) أعضاء يختارون اعتبارا لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في"
+    },
+    {
+      "id": "1 (145)__page_015__region_001_line_0004.png",
+      "merged_text": "- أربعة (4) أعضاء يختارون اعتباراً لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في",
+      "official_test_text": "- أربعة (4) أعضاء يختارون اعتبارا لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في"
+    },
+    {
+      "id": "1 (145)__page_015__region_002_line_0004.png",
+      "merged_text": "- خمسة (5) أعضاء يختارون اعتباراً لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في",
+      "official_test_text": "- خمسة (5) أعضاء يختارون اعتبارا لكفاءتهم ومؤهلاتهم العلمية والفكرية من بين الشخصيات المشهود لها بالتجربة والخبرة في"
+    },
+    {
+      "id": "1 (145)__page_017__region_004_line_0001.png",
+      "merged_text": "- يوظف ويعين الموارد البشرية اللازمة لقيام المجلس الوطني بصلاحياته، طبقاً لأحكام المادة 49 من هذا القانون",
+      "official_test_text": "- يوظف ويعين الموارد البشرية اللازمة لقيام المجلس الوطني بصلاحياته، طبقا لأحكام المادة 49 من هذا القانون"
+    },
+    {
+      "id": "1 (145)__page_018__region_005_line_0005.png",
+      "merged_text": "الحاضرين، وفي حالة تعادل الأصوات، يعتبر صوت الرئيس مرجحًا.",
+      "official_test_text": "الحاضرين، وفي حالة تعادل الأصوات، يعتبر صوت الرئيس مرجحا."
+    },
+    {
+      "id": "1 (145)__page_020__region_009_line_0003.png",
+      "merged_text": "طبقاً لأحكام الفقرة الأولى من الفصل 132 من الدستور، يحال النظام الداخلي للمجلس الوطني إلى المحكمة",
+      "official_test_text": "طبقا لأحكام الفقرة الأولى من الفصل 132 من الدستور، يحال النظام الداخلي للمجلس الوطني إلى المحكمة"
+    },
+    {
+      "id": "1 (145)__page_021__region_014_line_0001.png",
+      "merged_text": "الظهير الشريف رقم 1.01.299 الصادر في 29 من رجب 1422 (17 أُكتوبر 2001) القاضي بإحداث المعهد الملكي",
+      "official_test_text": "الظهير الشريف رقم 1.01.299 الصادر في 29 من رجب 1422 (17 أكتوبر 2001) القاضي بإحداث المعهد الملكي"
+    },
+    {
+      "id": "1 (154)__page_003__region_002_line_0001.png",
+      "merged_text": "مشروع مرسوم رقم 2.19.457 صادر في…) بتحديد أعضاء مجلس",
+      "official_test_text": "مشروع مرسوم رقم 2.19.457 صادر في...) بتحديد أعضاء مجلس"
+    },
+    {
+      "id": "1 (154)__page_003__region_004_line_0003.png",
+      "merged_text": "وبعد المداولة في مجلس الحكومة المنعقد بتاريخ…(",
+      "official_test_text": "وبعد المداولة في مجلس الحكومة المنعقد بتاريخ...("
+    },
+    {
+      "id": "1 (154)__page_003__region_011_line_0014.png",
+      "merged_text": "12 ممثلاً عن المنظمات المهنية للمشغلين، تقترحهم هذه المنظمات.",
+      "official_test_text": "12 ممثلا عن المنظمات المهنية للمشغلين، تقترحهم هذه المنظمات."
+    },
+    {
+      "id": "1 (169)__page_001__region_014_line_0002.png",
+      "merged_text": "ثلاثين يوما ابتداءً من تاريخ التوصل بأخر إشعار متعلق باستكمال الطرفين للمساطر الدستورية اللازمة في كلا",
+      "official_test_text": "ثلاثين يوما ابتداء من تاريخ التوصل بأخر إشعار متعلق باستكمال الطرفين للمساطر الدستورية اللازمة في كلا"
+    },
+    {
+      "id": "1 (169)__page_006__region_001_line_0014.png",
+      "merged_text": "2. وفقًا لحق الدول في التنظيم ولمبادئ القانون الدولي العرفي المتعلقة بسلطات الشرطة، فإن التدابير التشريعية",
+      "official_test_text": "2. وفقا لحق الدول في التنظيم ولمبادئ القانون الدولي العرفي المتعلقة بسلطات الشرطة، فإن التدابير التشريعية"
+    },
+    {
+      "id": "1 (169)__page_006__region_001_line_0016.png",
+      "merged_text": "العامة مثل الصحة العامة والسلامة والبيئة والعمل، أو التي تؤدي إلى فرض ضرائب عامة مشروعة أو تغييرًا عامًا في قيمة",
+      "official_test_text": "العامة مثل الصحة العامة والسلامة والبيئة والعمل، أو التي تؤدي إلى فرض ضرائب عامة مشروعة أو تغييرا عاما في قيمة"
+    },
+    {
+      "id": "1 (169)__page_006__region_001_line_0020.png",
+      "merged_text": "ب) يكون معادلاً للقيمة السوقية العادلة للاستثمارات المنزوعة الملكية قبل نزع الملكية الفعلي مباشرة (\"تاريخ نزع الملكية\")؛",
+      "official_test_text": "ب) يكون معادلا للقيمة السوقية العادلة للاستثمارات المنزوعة الملكية قبل نزع الملكية الفعلي مباشرة (\"تاريخ نزع الملكية\")؛"
+    },
+    {
+      "id": "1 (169)__page_009__region_001_line_0018.png",
+      "merged_text": "لأي من الطرفين رفع النزاع إلى التحكيم الدولي وفقًا للشروط الموضحة في الفقرة 3 أدناه.",
+      "official_test_text": "لأي من الطرفين رفع النزاع إلى التحكيم الدولي وفقا للشروط الموضحة في الفقرة 3 أدناه."
+    },
+    {
+      "id": "1 (169)__page_006__region_001_line_0010.png",
+      "merged_text": "١. بدافع أسباب المنفعة العامة؛",
+      "official_test_text": "1. بدافع أسباب المنفعة العامة؛"
+    }
+  ],
+  "test_annotation_policy": "Official holdout text is authoritative; preserve it unchanged after common normalization. Exclude test filenames and both official/merged text variants from train and validation.",
+  "quality_quarantine_policy": "Explicit two source IDs, manually inspected, excluded only if assigned to training after split creation. No repeated-punctuation heuristic. Validation and official test unchanged.",
+  "quarantined_train_records": [
+    {
+      "image": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\data\\gazette\\images\\1 (157)__page_001__region_010.png",
+      "text": "وحرر بالرباط، في ١٠٥٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠",
+      "id": "1 (157)__page_001__region_010.png",
+      "reason": "Visual inspection: annotation contains dozens of zeros that do not match the date in the crop."
+    },
+    {
+      "image": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\data\\gazette\\images\\1 (183)__page_026__region_001.png",
+      "text": "يمنع على أعضاء الإدارة الجماعية أن تكون لهم مصالح مباشرة أو غير مباشرة أو أن يحتفظوا بها في مقاولة أو مؤسسة أو أية هيئة أخرى تعاملت مع التعاضدية أو في صفقة أبرمت معها.",
+      "id": "1 (183)__page_026__region_001.png",
+      "reason": "Visual inspection: crop contains two visual text lines; this recognizer expects one line."
+    }
+  ],
+  "train_val_page_overlap": 0,
+  "train_test_page_overlap": 4,
+  "val_test_page_overlap": 2,
+  "limitation": "Official test contains pages/documents also represented in other splits; no unseen-document generalization claim. Official test preserves any internal duplicates.",
+  "cross_split_id_image_hash_transcript_overlap": 0,
+  "within_split_duplicate_transcripts": {
+    "train": 226,
+    "val": 8,
+    "test": 23
+  },
+  "within_split_duplicate_images": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "eval_oov": {
+    "val": {
+      "characters": {},
+      "num_characters": 0,
+      "num_lines": 0
+    },
+    "test": {
+      "characters": {},
+      "num_characters": 0,
+      "num_lines": 0
+    }
+  },
+  "removed_for_test_overlap": [
+    "1 (103)__page_005__region_002.png",
+    "1 (112)__page_003__region_006.png",
+    "1 (135)__page_002__region_017.png",
+    "1 (158)__page_005__region_008.png",
+    "1 (137)__page_014__region_010.png",
+    "1 (152)__page_002__region_009_line_0001.png",
+    "1 (103)__page_002__region_013.png",
+    "1 (103)__page_002__region_014.png",
+    "1 (103)__page_005__region_004.png",
+    "1 (108)__page_001__region_003_line_0001.png",
+    "1 (108)__page_002__region_006_line_0005.png",
+    "1 (108)__page_004__region_002_line_0024.png",
+    "1 (108)__page_005__region_003_line_0001.png",
+    "1 (108)__page_005__region_003_line_0005.png",
+    "1 (108)__page_005__region_003_line_0021.png",
+    "1 (108)__page_006__region_004_line_0001.png",
+    "1 (108)__page_006__region_005_line_0001.png",
+    "1 (108)__page_008__region_001_line_0001.png",
+    "1 (108)__page_008__region_001_line_0016.png",
+    "1 (108)__page_008__region_001_line_0020.png",
+    "1 (108)__page_008__region_001_line_0024.png",
+    "1 (109)__page_002__region_011.png",
+    "1 (110)__page_009__region_009_line_0001.png",
+    "1 (112)__page_001__region_001_line_0004.png",
+    "1 (112)__page_002__region_003.png",
+    "1 (112)__page_005__region_008_line_0002.png",
+    "1 (114)__page_002__region_012_line_0001.png",
+    "1 (117)__page_002__region_007_line_0002.png",
+    "1 (117)__page_003__region_001_line_0007.png",
+    "1 (117)__page_005__region_007_line_0001.png",
+    "1 (127)__page_036__region_004_line_0002.png",
+    "1 (129)__page_002__region_007.png",
+    "1 (129)__page_002__region_013_line_0002.png",
+    "1 (131)__page_002__region_009.png",
+    "1 (133)__page_002__region_003_line_0002.png",
+    "1 (133)__page_003__region_003_line_0003.png",
+    "1 (135)__page_001__region_002_line_0003.png",
+    "1 (135)__page_001__region_002_line_0004.png",
+    "1 (135)__page_001__region_002_line_0005.png",
+    "1 (135)__page_002__region_006_line_0002.png",
+    "1 (135)__page_002__region_007.png",
+    "1 (135)__page_002__region_008.png",
+    "1 (135)__page_002__region_012_line_0001.png",
+    "1 (135)__page_002__region_014_line_0002.png",
+    "1 (135)__page_002__region_015.png",
+    "1 (137)__page_001__region_005.png",
+    "1 (137)__page_001__region_006.png",
+    "1 (137)__page_014__region_009.png",
+    "1 (138)__page_002__region_003_line_0003.png",
+    "1 (138)__page_002__region_003_line_0004.png",
+    "1 (143)__page_002__region_004.png",
+    "1 (143)__page_003__region_003.png",
+    "1 (143)__page_003__region_004.png",
+    "1 (148)__page_002__region_012.png",
+    "1 (148)__page_002__region_015.png",
+    "1 (148)__page_003__region_001.png",
+    "1 (151)__page_001__region_003.png",
+    "1 (151)__page_001__region_004_line_0002.png",
+    "1 (151)__page_002__region_001_line_0003.png",
+    "1 (151)__page_002__region_001_line_0005.png",
+    "1 (151)__page_003__region_001_line_0001.png",
+    "1 (151)__page_003__region_001_line_0008.png",
+    "1 (151)__page_007__region_001_line_0008.png",
+    "1 (152)__page_001__region_005_line_0003.png",
+    "1 (152)__page_002__region_001_line_0002.png",
+    "1 (152)__page_002__region_007.png",
+    "1 (152)__page_011__region_008_line_0002.png",
+    "1 (156)__page_003__region_006.png",
+    "1 (156)__page_004__region_004.png",
+    "1 (157)__page_002__region_005.png",
+    "1 (157)__page_003__region_002.png",
+    "1 (160)__page_001__region_003_line_0001.png",
+    "1 (160)__page_002__region_001_line_0004.png",
+    "1 (160)__page_003__region_001_line_0001.png",
+    "1 (164)__page_004__region_003.png",
+    "1 (166)__page_002__region_009.png",
+    "1 (172)__page_001__region_003_line_0001.png",
+    "1 (172)__page_001__region_003_line_0003.png",
+    "1 (172)__page_003__region_006.png",
+    "1 (172)__page_008__region_001_line_0020.png",
+    "1 (172)__page_009__region_003_line_0011.png",
+    "1 (172)__page_010__region_001_line_0001.png",
+    "1 (172)__page_010__region_001_line_0016.png",
+    "1 (172)__page_011__region_001_line_0010.png",
+    "1 (176)__page_002__region_012_line_0001.png",
+    "1 (176)__page_002__region_012_line_0002.png",
+    "1 (177)__page_005__region_006.png",
+    "1 (178)__page_001__region_003_line_0001.png",
+    "1 (178)__page_001__region_005.png",
+    "1 (178)__page_002__region_003.png",
+    "1 (178)__page_002__region_007.png",
+    "1 (178)__page_006__region_006_line_0001.png",
+    "1 (179)__page_002__region_004_line_0002.png",
+    "1 (179)__page_016__region_004_line_0002.png",
+    "1 (180)__page_003__region_008.png",
+    "1 (180)__page_003__region_009.png",
+    "1 (180)__page_009__region_003_line_0002.png",
+    "1 (183)__page_001__region_004.png",
+    "1 (183)__page_011__region_001_line_0002.png",
+    "1 (185)__page_002__region_005.png",
+    "1 (186)__page_001__region_003_line_0001.png",
+    "1 (187)__page_002__region_005_line_0003.png"
+  ],
+  "removed_for_val_overlap": [
+    "1 (113)__page_003__region_012.png",
+    "1 (157)__page_001__region_009.png",
+    "1 (129)__page_001__region_007.png",
+    "1 (129)__page_001__region_003_line_0001.png",
+    "1 (129)__page_001__region_003_line_0002.png",
+    "1 (129)__page_001__region_003_line_0003.png",
+    "1 (129)__page_001__region_004.png",
+    "1 (129)__page_001__region_005_line_0002.png",
+    "1 (129)__page_001__region_005_line_0003.png",
+    "1 (127)__page_026__region_010_line_0001.png",
+    "1 (170)__page_007__region_006_line_0006.png",
+    "1 (170)__page_007__region_006_line_0012_line_0002.png",
+    "1 (170)__page_004__region_003_line_0005.png",
+    "1 (127)__page_019__region_004_line_0002.png",
+    "1 (127)__page_019__region_005_line_0002.png",
+    "1 (127)__page_019__region_007.png",
+    "1 (132)__page_019__region_004.png",
+    "1 (170)__page_005__region_005_line_0008.png",
+    "1 (168)__page_005__region_003_line_0002.png",
+    "1 (168)__page_005__region_003_line_0007.png",
+    "1 (168)__page_005__region_003_line_0008.png",
+    "1 (158)__page_016__region_016.png",
+    "1 (127)__page_016__region_007_line_0002.png",
+    "1 (127)__page_016__region_008_line_0002.png",
+    "1 (127)__page_016__region_008_line_0006.png",
+    "1 (131)__page_001__region_012.png",
+    "1 (187)__page_005__region_012.png",
+    "1 (170)__page_006__region_001_line_0003.png",
+    "1 (170)__page_006__region_006_line_0005.png",
+    "1 (170)__page_006__region_006_line_0011_line_0001.png",
+    "1 (170)__page_006__region_007_line_0006_line_0002.png",
+    "1 (120)__page_002__region_003_line_0003.png",
+    "1 (168)__page_010__region_002.png",
+    "1 (168)__page_010__region_004.png",
+    "1 (168)__page_010__region_005_line_0001.png",
+    "1 (168)__page_010__region_005_line_0002.png",
+    "1 (168)__page_010__region_005_line_0003.png",
+    "1 (168)__page_010__region_008.png",
+    "1 (168)__page_010__region_016.png",
+    "1 (170)__page_010__region_006.png",
+    "1 (168)__page_007__region_005.png",
+    "1 (168)__page_007__region_014.png",
+    "1 (168)__page_007__region_015.png",
+    "1 (168)__page_008__region_003.png",
+    "1 (168)__page_008__region_005.png",
+    "1 (168)__page_008__region_006.png",
+    "1 (168)__page_008__region_013.png",
+    "1 (168)__page_008__region_015.png",
+    "1 (168)__page_008__region_023.png",
+    "1 (183)__page_032__region_006_line_0001.png",
+    "1 (127)__page_025__region_013.png",
+    "1 (183)__page_013__region_004.png",
+    "1 (133)__page_001__region_019.png",
+    "1 (158)__page_002__region_007.png",
+    "1 (158)__page_006__region_009_line_0002.png",
+    "1 (185)__page_001__region_005.png",
+    "1 (12)__page_016__region_005_line_0001.png"
+  ],
+  "source_md5": {
+    "images.zip": "92a23fa2b77a04ada35812cb34c83cc7",
+    "merged.jsonl": "99071657c9b295b87cefacc96fdeae30",
+    "real_holdout_test.jsonl": "5dcc7d21a062b98d9401824577ba28ce",
+    "README.md": "95ceff82838ece0c9c91507a87eed4ec",
+    "checksums.txt": "e60a91f85629a96f510a57b4e7c35489"
+  },
+  "source_sha256": {
+    "images.zip": "e5836edf3bba4a4b49ed6cb2018cc08fcf0f026d48605fe14a329acf6fda3f75",
+    "merged.jsonl": "14e7c090598dab2af26612a1689ca594ec975cb262462e5bc0bb55cb0c788989",
+    "real_holdout_test.jsonl": "c5cc4af3d9731d740ac54cec765c7ad17afa5fd1b6534013a056f51cd988119d",
+    "README.md": "290d27d907fda70bf80d7b1f6280cfd91454ca188469ef1387947bc44af1a103",
+    "checksums.txt": "49280b3d3b448cec5f9c7692d252ca605df7340d04ecc25012176b06361a602a"
+  },
+  "manifest_sha256": {
+    "train": "6571d8aedf08846d9a07cea06e9315115ba7b181b2cd6aca1a470ad792b1feee",
+    "val": "747f486e42566f941a70e1067f7fa4d4913eb419650403ef5546b66f77b48a33",
+    "test": "004631995de19921006b0fc6f184600908cae8a5d29a1da65a06d4826929636e"
+  }
+}

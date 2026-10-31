@@ -1,0 +1,28 @@
+{
+  "samples": 1212,
+  "cer": 0.014861294583883751,
+  "wer": 0.06935617573915447,
+  "exact_accuracy": 0.5165016501650165,
+  "character_errors": 1305,
+  "reference_characters": 87812,
+  "word_errors": 1004,
+  "reference_words": 14476,
+  "seconds": 3.181916999999885,
+  "lines_per_second": 380.9024559723097,
+  "checkpoint": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\outputs\\arabic_ocr\\runs\\baseline\\best.pt",
+  "checkpoint_epoch": 8,
+  "manifest": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\data\\gazette\\test.jsonl",
+  "manifest_sha256": "004631995de19921006b0fc6f184600908cae8a5d29a1da65a06d4826929636e",
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "cudnn": 91900,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "gpu_total_gb": 7.933,
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "decoder": "CTC greedy, no language model",
+  "oov_characters": []
+}

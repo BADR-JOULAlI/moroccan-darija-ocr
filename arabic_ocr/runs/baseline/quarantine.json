@@ -1,0 +1,17 @@
+{
+  "scope": "Training rows only, after frozen split assignment; validation and official test unchanged.",
+  "records": [
+    {
+      "image": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\data\\gazette\\images\\1 (157)__page_001__region_010.png",
+      "text": "وحرر بالرباط، في ١٠٥٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠٠",
+      "id": "1 (157)__page_001__region_010.png",
+      "reason": "Visual inspection: annotation contains dozens of zeros that do not match the date in the crop."
+    },
+    {
+      "image": "C:\\Users\\sail_\\Documents\\Codex\\2026-10-29\\oui-il-existe-des-datasets-adapt\\work\\data\\gazette\\images\\1 (183)__page_026__region_001.png",
+      "text": "يمنع على أعضاء الإدارة الجماعية أن تكون لهم مصالح مباشرة أو غير مباشرة أو أن يحتفظوا بها في مقاولة أو مؤسسة أو أية هيئة أخرى تعاملت مع التعاضدية أو في صفقة أبرمت معها.",
+      "id": "1 (183)__page_026__region_001.png",
+      "reason": "Visual inspection: crop contains two visual text lines; this recognizer expects one line."
+    }
+  ]
+}
