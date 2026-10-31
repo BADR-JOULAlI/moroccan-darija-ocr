@@ -6,4 +6,6 @@ The current baseline was trained on the Moroccan Official Gazette and tested on 
 
 See the complete setup, training commands, dataset audit, and adaptation instructions in [arabic_ocr/README.md](arabic_ocr/README.md).
 
+![Validation and training curves](arabic_ocr/assets/validation_training_curves.png)
+
 The repository intentionally excludes raw datasets and AtlasOCR's large Parquet shards. AtlasOCR inspection found page/paragraph images without published line-level boxes, so the adaptation tools refuse unverified multiline supervision.
