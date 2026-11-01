@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import random
 import sys
 from pathlib import Path
 
@@ -25,6 +26,7 @@ from model import CRNN, greedy_decode
 from data import assert_ctc_feasible, collate_lines, preprocess
 from prepare_line_manifest import read_rows
 from segment_page_lines import find_line_boxes, segment_record
+from generate_synthetic_lines import read_texts, render_line
 
 
 @pytest.fixture(autouse=True)
@@ -281,3 +283,15 @@ def test_page_segmentation_requires_explicit_text_lines(tmp_path):
     rows = segment_record({"id": "page", "image": image_path.name, "text": "première\nseconde"}, tmp_path, tmp_path / "lines")
     assert [row["text"] for row in rows] == ["première", "seconde"]
     assert all(Path(row["image"]).is_file() for row in rows)
+
+
+def test_synthetic_generator_reads_text_and_renders_line(tmp_path):
+    source = tmp_path / "texts.txt"
+    source.write_text("سلام\n\nكيف داير؟\n", encoding="utf-8")
+    assert read_texts(source) == ["سلام", "كيف داير؟"]
+    font = Path("C:/Windows/Fonts/arial.ttf")
+    if not font.exists():
+        pytest.skip("Windows Arial font is unavailable")
+    image = render_line("سلام", font, 32, random.Random(1))
+    assert image.mode == "L"
+    assert image.width > 32 and image.height > 8

@@ -30,6 +30,15 @@ Pour les pages AtlasOCR qui possèdent réellement une transcription avec un ret
 python -X utf8 segment_page_lines.py --input pages.jsonl --input-root . --output-dir lines --output-jsonl lines.jsonl
 ```
 
+Pour générer des lignes synthétiques à partir d'un fichier texte DODa (`.txt`, `.csv` ou `.jsonl`) :
+
+```powershell
+python -X utf8 generate_synthetic_lines.py --texts doda_sentences.txt --fonts C:\Windows\Fonts\arial.ttf --output-dir ..\darija_synthetic\images --output-data-dir ..\darija_synthetic\manifests --val-ratio 0.1 --seed 42
+```
+
+Les images synthétiques servent au pré-entraînement et à l'augmentation. Elles ne remplacent pas les images réelles
+AtlasOCR pour l'évaluation finale.
+
 ## Installation sous Windows / PowerShell
 
 Exécuter les commandes depuis le dossier contenant ce README. Python 3.12 a été utilisé pour cette exécution. Un environnement virtuel est conseillé pour une nouvelle installation :
