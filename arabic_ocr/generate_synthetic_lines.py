@@ -17,19 +17,22 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 
-def read_texts(path: Path) -> list[str]:
+def read_texts(path: Path, text_column: str = "text") -> list[str]:
     if path.suffix.lower() == ".jsonl":
         values = []
         for raw in path.read_text(encoding="utf-8-sig").splitlines():
             if raw.strip():
                 row = json.loads(raw)
-                values.append(str(row.get("text", "")))
+                values.append(str(row.get(text_column, "")))
     elif path.suffix.lower() == ".csv":
         with path.open(encoding="utf-8-sig", newline="") as stream:
-            values = [str(row.get("text", "")) for row in csv.DictReader(stream)]
+            values = [str(row.get(text_column, "")) for row in csv.DictReader(stream)]
     else:
         values = path.read_text(encoding="utf-8-sig").splitlines()
-    return [" ".join(unicodedata.normalize("NFC", text).split()) for text in values if text.strip()]
+    cleaned = [" ".join(unicodedata.normalize("NFC", text).split()) for text in values if text.strip()]
+    # Deduplicate before splitting so identical transcriptions cannot leak from
+    # synthetic training into validation.
+    return list(dict.fromkeys(cleaned))
 
 
 def shape_text(text: str) -> str:
@@ -59,10 +62,12 @@ def render_line(text: str, font_path: Path, size: int, rng: random.Random) -> Im
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--texts", type=Path, required=True)
+    parser.add_argument("--text-column", default="text", help="CSV/JSONL field containing the target text")
     parser.add_argument("--fonts", type=Path, nargs="+", required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--output-data-dir", type=Path, required=True)
     parser.add_argument("--val-ratio", type=float, default=0.1)
+    parser.add_argument("--limit", type=int, default=0, help="maximum number of texts (0 = all)")
     parser.add_argument("--font-size", type=int, default=42)
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
@@ -71,7 +76,9 @@ def main() -> None:
     fonts = [font for font in args.fonts if font.is_file()]
     if not fonts:
         raise FileNotFoundError("No font files found")
-    texts = read_texts(args.texts)
+    texts = read_texts(args.texts, args.text_column)
+    if args.limit:
+        texts = texts[: args.limit]
     if not texts:
         raise ValueError("No non-empty texts found")
     rng = random.Random(args.seed)

@@ -61,6 +61,14 @@ python -X utf8 generate_synthetic_lines.py --texts doda_sentences.txt --fonts C:
 Les images synthétiques servent au pré-entraînement et à l'augmentation. Elles ne remplacent pas les images réelles
 AtlasOCR pour l'évaluation finale.
 
+### Premier corpus synthétique DODa
+
+Un premier sous-ensemble reproductible de **5 000 phrases arabes Darija** a été généré localement depuis
+`work/doda/sentences/sentences.csv` (colonne `darija_ar`). Après déduplication et contrôle CTC, il contient
+**4 500 lignes d'entraînement**, **500 lignes de validation** et **74 caractères**. Les manifests validés sont dans
+`work/darija_synthetic_v2/validated/`. Ce corpus est un point de départ pour vérifier le pipeline, pas encore une
+évaluation de la robustesse sur des documents réels.
+
 ## Installation sous Windows / PowerShell
 
 Exécuter les commandes depuis le dossier contenant ce README. Python 3.12 a été utilisé pour cette exécution. Un environnement virtuel est conseillé pour une nouvelle installation :
