@@ -12,6 +12,28 @@ Deux notebooks sont disponibles dans `notebooks/` : `01_dataset_visualization.ip
 
 ![Courbes de validation et d'apprentissage](assets/validation_training_curves.png)
 
+### Résultats visuels du modèle
+
+| Mesure | Test officiel |
+|---|---:|
+| CER | **1,49 %** |
+| WER | **6,94 %** |
+| Exactitude des lignes | **51,65 %** |
+| Débit | **380,9 lignes/s** |
+
+![Résumé des métriques du test](assets/test_metrics_summary.png)
+
+La distribution ci-dessous montre que la majorité des lignes ont une erreur faible, tandis qu'un petit nombre de
+lignes difficiles concentre les erreurs élevées.
+
+![Distribution du CER par ligne](assets/test_cer_distribution.png)
+
+![Galerie de prédictions](runs/baseline/test/test_images_transcriptions_gallery.png)
+
+Les chiffres ci-dessus correspondent uniquement au Bulletin officiel arabe et ne constituent pas encore une mesure de
+performance sur la darija. La séparation entre données synthétiques, données réelles et benchmark est décrite dans
+`ATLAS_NEXT.md`.
+
 Pour préparer une adaptation, fournissez d'abord des manifests `train.jsonl` et `val.jsonl` contenant uniquement des couples vérifiés image d'une ligne / transcription d'une ligne. Le validateur refuse les paragraphes multiligne et les séquences CTC impossibles :
 
 ```powershell
