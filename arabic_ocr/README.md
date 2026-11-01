@@ -69,6 +69,11 @@ Un premier sous-ensemble reproductible de **5 000 phrases arabes Darija** a ét�
 `work/darija_synthetic_v2/validated/`. Ce corpus est un point de départ pour vérifier le pipeline, pas encore une
 évaluation de la robustesse sur des documents réels.
 
+Un contrôle rapide de **3 époques sur la RTX 5070** atteint sur cette validation synthétique **2,21 % de CER**,
+**9,92 % de WER** et **61,4 % de lignes exactes**. Ce résultat confirme que le pipeline apprend les textes générés ;
+il ne représente pas une performance sur des documents Darija réels. Deux caractères vocalisés absents du vocabulaire
+d'entraînement sont signalés dans `runs/darija_synthetic_v2/val/metrics.json`.
+
 ## Installation sous Windows / PowerShell
 
 Exécuter les commandes depuis le dossier contenant ce README. Python 3.12 a été utilisé pour cette exécution. Un environnement virtuel est conseillé pour une nouvelle installation :
