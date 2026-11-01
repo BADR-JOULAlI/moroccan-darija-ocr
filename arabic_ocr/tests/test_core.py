@@ -24,6 +24,7 @@ from metrics import Metrics, edit_distance
 from model import CRNN, greedy_decode
 from data import assert_ctc_feasible, collate_lines, preprocess
 from prepare_line_manifest import read_rows
+from segment_page_lines import find_line_boxes, segment_record
 
 
 @pytest.fixture(autouse=True)
@@ -261,3 +262,22 @@ def test_line_manifest_rejects_tiny_images(tmp_path):
     )
     with pytest.raises(ValueError, match="too small"):
         read_rows(manifest, tmp_path, normalize=True)
+
+
+def test_page_segmentation_requires_explicit_text_lines(tmp_path):
+    image = Image.new("L", (120, 80), 255)
+    pixels = image.load()
+    for y in range(10, 20):
+        for x in range(5, 80):
+            pixels[x, y] = 0
+    for y in range(45, 55):
+        for x in range(5, 70):
+            pixels[x, y] = 0
+    image_path = tmp_path / "page.png"
+    image.save(image_path)
+    assert len(find_line_boxes(image)) == 2
+    with pytest.raises(ValueError, match="explicit line breaks"):
+        segment_record({"id": "page", "image": image_path.name, "text": "paragraph"}, tmp_path, tmp_path / "lines")
+    rows = segment_record({"id": "page", "image": image_path.name, "text": "première\nseconde"}, tmp_path, tmp_path / "lines")
+    assert [row["text"] for row in rows] == ["première", "seconde"]
+    assert all(Path(row["image"]).is_file() for row in rows)

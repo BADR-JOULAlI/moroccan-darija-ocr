@@ -24,6 +24,12 @@ python -X utf8 train.py --data-dir ../../work/darija_lines --run-dir runs/darija
 
 Le validateur contrôle aussi les dimensions minimales des images et refuse les doublons d'image dans un même split. Ces contrôles évitent d'introduire silencieusement des exemples inutilisables ou une fuite entre lignes.
 
+Pour les pages AtlasOCR qui possèdent réellement une transcription avec un retour à la ligne par ligne, `segment_page_lines.py` peut produire les crops. Il refuse les paragraphes sans retours à la ligne et s'arrête si le nombre de lignes détectées ne correspond pas au nombre de transcriptions :
+
+```powershell
+python -X utf8 segment_page_lines.py --input pages.jsonl --input-root . --output-dir lines --output-jsonl lines.jsonl
+```
+
 ## Installation sous Windows / PowerShell
 
 Exécuter les commandes depuis le dossier contenant ce README. Python 3.12 a été utilisé pour cette exécution. Un environnement virtuel est conseillé pour une nouvelle installation :
