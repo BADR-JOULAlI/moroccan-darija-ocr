@@ -25,6 +25,7 @@ def normalize_text(text: str) -> str:
 def read_rows(path: Path, root: Path, normalize: bool) -> list[dict]:
     rows = []
     seen = set()
+    seen_images = set()
     with path.open(encoding="utf-8-sig") as stream:
         for line_no, line in enumerate(stream, 1):
             if not line.strip():
@@ -46,10 +47,18 @@ def read_rows(path: Path, root: Path, normalize: bool) -> list[dict]:
             seen.add(identifier)
             with Image.open(image) as sample:
                 sample.load()
+                if sample.width < 16 or sample.height < 8:
+                    raise ValueError(
+                        f"{path}:{line_no}: image is too small ({sample.width}x{sample.height})"
+                    )
                 _, width = preprocess(sample)
             required = len(text) + sum(a == b for a, b in zip(text, text[1:]))
             if width // 4 < required:
                 raise ValueError(f"{path}:{line_no}: CTC needs {required} frames but image provides {width // 4}")
+            image_hash = hashlib.sha256(image.read_bytes()).hexdigest()
+            if image_hash in seen_images:
+                raise ValueError(f"{path}:{line_no}: duplicate image content: {image.name}")
+            seen_images.add(image_hash)
             rows.append({"image": str(image), "text": text, "id": identifier})
     return rows
 

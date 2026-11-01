@@ -22,6 +22,8 @@ python -X utf8 train.py --data-dir ../../work/darija_lines --run-dir runs/darija
 
 `adapt.py` agrandit le classifieur CTC, recopie les poids des caractères déjà appris et initialise les nouveaux caractères. Il ne fabrique pas de crops et ne transforme pas une annotation de paragraphe en pseudo-lignes.
 
+Le validateur contrôle aussi les dimensions minimales des images et refuse les doublons d'image dans un même split. Ces contrôles évitent d'introduire silencieusement des exemples inutilisables ou une fuite entre lignes.
+
 ## Installation sous Windows / PowerShell
 
 Exécuter les commandes depuis le dossier contenant ce README. Python 3.12 a été utilisé pour cette exécution. Un environnement virtuel est conseillé pour une nouvelle installation :

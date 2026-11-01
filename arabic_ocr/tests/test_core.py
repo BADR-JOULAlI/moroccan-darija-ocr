@@ -231,3 +231,33 @@ def test_line_manifest_accepts_vetted_single_line(tmp_path):
     rows = read_rows(manifest, tmp_path, normalize=True)
     assert rows[0]["image"] == str(image.resolve())
     assert rows[0]["text"] == "دارجة"
+
+
+def test_line_manifest_rejects_duplicate_image_content(tmp_path):
+    first = tmp_path / "first.png"
+    second = tmp_path / "second.png"
+    Image.new("L", (320, 64), 240).save(first)
+    Image.open(first).save(second)
+    manifest = tmp_path / "rows.jsonl"
+    records = [
+        {"image": first.name, "text": "دارجة", "id": "first"},
+        {"image": second.name, "text": "عربية", "id": "second"},
+    ]
+    manifest.write_text(
+        "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in records),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="duplicate image content"):
+        read_rows(manifest, tmp_path, normalize=True)
+
+
+def test_line_manifest_rejects_tiny_images(tmp_path):
+    image = tmp_path / "tiny.png"
+    Image.new("L", (8, 8), 255).save(image)
+    manifest = tmp_path / "rows.jsonl"
+    manifest.write_text(
+        json.dumps({"image": image.name, "text": "دارجة", "id": "tiny"}, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="too small"):
+        read_rows(manifest, tmp_path, normalize=True)
