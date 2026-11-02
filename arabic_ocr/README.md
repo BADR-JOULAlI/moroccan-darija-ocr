@@ -22,6 +22,8 @@ Deux notebooks sont disponibles dans `notebooks/` : `01_dataset_visualization.ip
 L'architecture complète du pipeline, du corpus jusqu'à la publication du checkpoint, est décrite dans
 [`docs/architecture.md`](docs/architecture.md).
 
+![Architecture détaillée CNN et CTC](assets/model_architecture_reference.png)
+
 ![Schéma de l'architecture du projet](assets/project_architecture.png)
 
 `03_test_images_transcriptions.ipynb` affiche les images du test officiel avec la référence, la prédiction et le CER de chaque ligne. Il exporte aussi `runs/baseline/test/test_images_transcriptions_gallery.png`.

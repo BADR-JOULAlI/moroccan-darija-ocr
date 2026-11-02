@@ -6,6 +6,10 @@ utilisés pour générer un pré-entraînement synthétique, tandis que le bench
 
 ![Architecture CNN BiLSTM CTC](../assets/project_architecture.png)
 
+## Schéma détaillé de référence
+
+![Architecture détaillée CNN et CTC](../assets/model_architecture_reference.png)
+
 ```mermaid
 flowchart LR
     subgraph data ["Sources de données"]
