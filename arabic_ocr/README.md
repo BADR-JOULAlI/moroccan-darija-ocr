@@ -72,6 +72,19 @@ python -X utf8 generate_synthetic_lines.py --texts doda_sentences.txt --fonts C:
 Les images synthétiques servent au pré-entraînement et à l'augmentation. Elles ne remplacent pas les images réelles
 AtlasOCR pour l'évaluation finale.
 
+Si l'annotation manuelle n'est pas possible, `fetch_atlas_texts.py` récupère un nombre borné de transcriptions
+AtlasOCR et les découpe en segments courts. Ces textes peuvent ensuite être rendus en images par
+`generate_synthetic_lines.py` :
+
+```powershell
+python -X utf8 fetch_atlas_texts.py --output ../../work/atlas_synthetic/atlas_texts.jsonl --rows 1000 --max-chars 100
+python -X utf8 generate_synthetic_lines.py --texts ../../work/atlas_synthetic/atlas_texts.jsonl --fonts C:\Windows\Fonts\arial.ttf C:\Windows\Fonts\tahoma.ttf --output-dir ../../work/atlas_synthetic/images --output-data-dir ../../work/atlas_synthetic/manifests --seed 42
+```
+
+Un premier essai automatique a produit **5 388 lignes synthétiques** (4 849 train / 539 validation). Après trois
+époques sur RTX 5070 : CER **13,22 %**, WER **41,68 %**, exactitude **0,56 %**. Ces chiffres mesurent la difficulté
+du corpus synthétique Atlas, pas la qualité sur des images réelles.
+
 ### Premier corpus synthétique DODa
 
 Un premier sous-ensemble reproductible de **5 000 phrases arabes Darija** a été généré localement depuis
