@@ -85,6 +85,11 @@ Un premier essai automatique a produit **5 388 lignes synthétiques** (4 849 tra
 époques sur RTX 5070 : CER **13,22 %**, WER **41,68 %**, exactitude **0,56 %**. Ces chiffres mesurent la difficulté
 du corpus synthétique Atlas, pas la qualité sur des images réelles.
 
+Un second passage applique un filtre de scripts pour écarter les caractères étrangers accidentels. Il produit **5 329
+lignes** (4 796 train / 533 validation, 181 caractères). Après trois époques : CER **6,63 %**, WER **15,01 %** et
+exactitude **15,20 %**. Ce modèle est l'expérience synthétique la plus propre actuellement, mais reste un modèle de
+pré-entraînement : aucune image n'est une photographie réelle annotée.
+
 ### Premier corpus synthétique DODa
 
 Un premier sous-ensemble reproductible de **5 000 phrases arabes Darija** a été généré localement depuis

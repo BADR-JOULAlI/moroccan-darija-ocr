@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import json
 import time
+import unicodedata
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -38,6 +39,22 @@ def chunks(text: str, max_chars: int) -> list[str]:
     return result
 
 
+def acceptable(text: str) -> bool:
+    """Reject accidental foreign-script/source-noise strings."""
+    meaningful = [char for char in text if not char.isspace()]
+    if not meaningful:
+        return False
+    allowed = 0
+    for char in meaningful:
+        code = ord(char)
+        category = unicodedata.category(char)
+        if 0x0600 <= code <= 0x06FF or 0x0750 <= code <= 0x077F:
+            allowed += 1
+        elif char.isascii() or category.startswith("P") or category.startswith("N"):
+            allowed += 1
+    return allowed / len(meaningful) >= 0.97
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
@@ -55,7 +72,7 @@ def main() -> None:
         for item in payload.get("rows", []):
             row = item["row"]
             for part in chunks(str(row.get("text", "")), args.max_chars):
-                if len(part) < 2 or part in seen:
+                if len(part) < 2 or part in seen or not acceptable(part):
                     continue
                 seen.add(part)
                 output.append({"id": f"atlas_train_{len(output):07d}", "text": part,
