@@ -4,6 +4,8 @@ Le projet sépare clairement la préparation des données, la reconnaissance d'u
 l'évaluation. Les images AtlasOCR ne sont pas converties automatiquement en annotations de lignes : les textes sont
 utilisés pour générer un pré-entraînement synthétique, tandis que le benchmark reste réservé au test.
 
+![Architecture CNN BiLSTM CTC](../assets/project_architecture.png)
+
 ```mermaid
 flowchart LR
     subgraph data ["Sources de données"]
