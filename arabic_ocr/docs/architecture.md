@@ -7,41 +7,41 @@ utilisés pour générer un pré-entraînement synthétique, tandis que le bench
 ```mermaid
 flowchart LR
     subgraph data ["Sources de données"]
-        gazette["Bulletin officiel marocain\nLignes arabes réelles"]
-        doda["DODa\nTextes Darija"]
-        atlas["AtlasOCR\nTextes et exemples"]
-        bench["AtlasOCRBench\nTest réservé"]
+        gazette["Bulletin officiel marocain - lignes arabes réelles"]
+        doda["DODa - textes Darija"]
+        atlas["AtlasOCR - textes et exemples"]
+        bench["AtlasOCRBench - test réservé"]
     end
 
     subgraph prep ["Préparation"]
-        fetch["Récupération bornée\ndes textes"]
-        render["Rendu synthétique\navec polices arabes"]
-        validate["Validation manifest\nCTC et déduplication"]
+        fetch["Récupération bornée des textes"]
+        render["Rendu synthétique avec polices arabes"]
+        validate["Validation manifest, CTC et déduplication"]
         split["Train / validation"]
     end
 
     subgraph recognizer ["Reconnaissance d'une ligne"]
         input["Image de ligne"]
-        preprocess["Niveaux de gris\nredimensionnement"]
-        cnn["CNN\nextraction visuelle"]
-        rtl["Inversion de l'axe\nRTL valide"]
-        bilstm["BiLSTM\ncontexte séquentiel"]
-        linear["Projection linéaire\nclasses + blank CTC"]
+        preprocess["Niveaux de gris et redimensionnement"]
+        cnn["CNN - extraction visuelle"]
+        rtl["Inversion de l'axe RTL valide"]
+        bilstm["BiLSTM - contexte séquentiel"]
+        linear["Projection linéaire - classes et blank CTC"]
         decode["Décodage glouton CTC"]
         output["Transcription"]
     end
 
     subgraph objective ["Entraînement"]
         target["Texte de référence"]
-        loss["CTC Loss\nalignement latent"]
-        checkpoint["Best checkpoint\nCER validation"]
+        loss["CTC Loss - alignement latent"]
+        checkpoint["Best checkpoint - CER validation"]
     end
 
     subgraph release ["Évaluation et publication"]
         metrics["CER / WER / exactitude"]
         plots["Notebooks et graphiques"]
-        github["GitHub\ncode et documentation"]
-        hf["Hugging Face\ncheckpoints"]
+        github["GitHub - code et documentation"]
+        hf["Hugging Face - checkpoints"]
     end
 
     gazette -->|"baseline réel"| validate
