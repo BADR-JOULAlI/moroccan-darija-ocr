@@ -6,6 +6,17 @@ Les mesures de l'exécution sur RTX 5070 et les exemples de prédictions figuren
 
 L'audit du format AtlasOCR, le chevauchement observé entre ses tests et AtlasOCRBench et la préparation des annotations de lignes sont décrits dans [ATLAS_NEXT.md](ATLAS_NEXT.md). Le script `inspect_atlas.py` reproduit cette inspection sans télécharger les fichiers Parquet complets.
 
+Pour préparer une revue humaine bornée d'images AtlasOCR réelles :
+
+```powershell
+python -X utf8 inspect_atlas.py --output-dir ../../work/atlas_review_v1 --rows 20 --images
+python -X utf8 build_atlas_review_manifest.py --audit-dir ../../work/atlas_review_v1 --output-dir ../../work/atlas_review_v1/manual_review
+```
+
+Le dossier `manual_review/` contient une planche de contact et un manifest marqué
+`needs_manual_line_annotation`. Les textes de page ne sont jamais copiés automatiquement vers des crops ; après
+annotation manuelle, seuls les couples ligne-image/transcription vérifiés doivent être passés au validateur.
+
 Deux notebooks sont disponibles dans `notebooks/` : `01_dataset_visualization.ipynb` explore les images et transcriptions, tandis que `02_training_visualization.ipynb` affiche les courbes d'apprentissage, les métriques du test et les erreurs visuelles. Ils utilisent les sorties déjà présentes et ne téléchargent pas de nouvelles données.
 
 `03_test_images_transcriptions.ipynb` affiche les images du test officiel avec la référence, la prédiction et le CER de chaque ligne. Il exporte aussi `runs/baseline/test/test_images_transcriptions_gallery.png`.
