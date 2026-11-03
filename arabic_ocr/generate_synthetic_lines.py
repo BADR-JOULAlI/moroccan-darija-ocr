@@ -56,16 +56,16 @@ def render_line(text: str, font_path: Path, size: int, rng: random.Random, augme
     draw = ImageDraw.Draw(canvas)
     draw.text((padding_x - left, padding_y - top), display_text, font=font, fill=rng.randint(0, 25))
     if augment:
-        if rng.random() < 0.65:
-            canvas = canvas.rotate(rng.uniform(-1.2, 1.2), resample=Image.Resampling.BILINEAR,
-                                  expand=True, fillcolor=255)
-        if rng.random() < 0.7:
-            canvas = ImageEnhance.Contrast(canvas).enhance(rng.uniform(0.75, 1.25))
         if rng.random() < 0.45:
-            canvas = canvas.filter(ImageFilter.GaussianBlur(radius=rng.uniform(0.15, 0.55)))
+            canvas = canvas.rotate(rng.uniform(-0.55, 0.55), resample=Image.Resampling.BILINEAR,
+                                  expand=True, fillcolor=255)
         if rng.random() < 0.5:
+            canvas = ImageEnhance.Contrast(canvas).enhance(rng.uniform(0.9, 1.1))
+        if rng.random() < 0.25:
+            canvas = canvas.filter(ImageFilter.GaussianBlur(radius=rng.uniform(0.08, 0.25)))
+        if rng.random() < 0.3:
             pixels = np.asarray(canvas, dtype=np.float32)
-            noise = np.random.default_rng(rng.randint(0, 2**32 - 1)).normal(0, 3.5, pixels.shape)
+            noise = np.random.default_rng(rng.randint(0, 2**32 - 1)).normal(0, 1.5, pixels.shape)
             canvas = Image.fromarray(np.uint8(np.clip(pixels + noise, 0, 255)), mode="L")
     return canvas
 

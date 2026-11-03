@@ -105,11 +105,12 @@ des captures imparfaites. Un test de génération augmenté a été validé sur 
 | Expérience | CER | WER | Exactitude ligne |
 |---|---:|---:|---:|
 | Atlas synthétique filtré, sans augmentation | **6,63 %** | **15,01 %** | **15,20 %** |
-| Atlas synthétique filtré, augmentation légère | 9,52 % | 22,36 % | 7,50 % |
+| Augmentation forte | 9,52 % | 22,36 % | 7,50 % |
+| Augmentation légère | 7,52 % | 17,43 % | 11,07 % |
 
-Sur ce premier essai de trois époques, l'augmentation est trop agressive pour les images synthétiques utilisées.
-Le modèle sans augmentation reste le meilleur checkpoint ; les transformations seront réduites et réintroduites
-progressivement après ajout de données plus variées.
+L'augmentation légère améliore nettement la version forte, mais reste légèrement moins bonne que le modèle sans
+augmentation après trois époques. Le checkpoint sans augmentation reste donc le meilleur pour cette comparaison ;
+la version légère sera réévaluée avec davantage d'époques et un mélange de documents réels lorsque disponible.
 
 ### Premier corpus synthétique DODa
 
