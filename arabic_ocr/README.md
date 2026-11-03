@@ -100,6 +100,17 @@ L'option `--augment` applique des variations légères de rotation, contraste, f
 des captures imparfaites. Un test de génération augmenté a été validé sur 100 exemples ; les tests du projet restent
 à **18 réussis**.
 
+### Comparaison augmentation
+
+| Expérience | CER | WER | Exactitude ligne |
+|---|---:|---:|---:|
+| Atlas synthétique filtré, sans augmentation | **6,63 %** | **15,01 %** | **15,20 %** |
+| Atlas synthétique filtré, augmentation légère | 9,52 % | 22,36 % | 7,50 % |
+
+Sur ce premier essai de trois époques, l'augmentation est trop agressive pour les images synthétiques utilisées.
+Le modèle sans augmentation reste le meilleur checkpoint ; les transformations seront réduites et réintroduites
+progressivement après ajout de données plus variées.
+
 ### Premier corpus synthétique DODa
 
 Un premier sous-ensemble reproductible de **5 000 phrases arabes Darija** a été généré localement depuis
