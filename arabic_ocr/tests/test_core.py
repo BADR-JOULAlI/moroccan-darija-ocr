@@ -292,6 +292,6 @@ def test_synthetic_generator_reads_text_and_renders_line(tmp_path):
     font = Path("C:/Windows/Fonts/arial.ttf")
     if not font.exists():
         pytest.skip("Windows Arial font is unavailable")
-    image = render_line("سلام", font, 32, random.Random(1))
+    image = render_line("سلام", font, 32, random.Random(1), augment=True)
     assert image.mode == "L"
     assert image.width > 32 and image.height > 8

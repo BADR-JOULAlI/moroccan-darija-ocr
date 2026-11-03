@@ -14,7 +14,8 @@ import random
 import unicodedata
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+import numpy as np
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 
 def read_texts(path: Path, text_column: str = "text") -> list[str]:
@@ -44,7 +45,7 @@ def shape_text(text: str) -> str:
         return text
 
 
-def render_line(text: str, font_path: Path, size: int, rng: random.Random) -> Image.Image:
+def render_line(text: str, font_path: Path, size: int, rng: random.Random, augment: bool = False) -> Image.Image:
     font = ImageFont.truetype(str(font_path), size=size)
     display_text = shape_text(text)
     probe = Image.new("L", (16, 16), 255)
@@ -54,8 +55,18 @@ def render_line(text: str, font_path: Path, size: int, rng: random.Random) -> Im
     canvas = Image.new("L", (max(32, right - left + 2 * padding_x), bottom - top + 2 * padding_y), 255)
     draw = ImageDraw.Draw(canvas)
     draw.text((padding_x - left, padding_y - top), display_text, font=font, fill=rng.randint(0, 25))
-    if rng.random() < 0.35:
-        canvas = canvas.filter(ImageFilter.GaussianBlur(radius=0.25))
+    if augment:
+        if rng.random() < 0.65:
+            canvas = canvas.rotate(rng.uniform(-1.2, 1.2), resample=Image.Resampling.BILINEAR,
+                                  expand=True, fillcolor=255)
+        if rng.random() < 0.7:
+            canvas = ImageEnhance.Contrast(canvas).enhance(rng.uniform(0.75, 1.25))
+        if rng.random() < 0.45:
+            canvas = canvas.filter(ImageFilter.GaussianBlur(radius=rng.uniform(0.15, 0.55)))
+        if rng.random() < 0.5:
+            pixels = np.asarray(canvas, dtype=np.float32)
+            noise = np.random.default_rng(rng.randint(0, 2**32 - 1)).normal(0, 3.5, pixels.shape)
+            canvas = Image.fromarray(np.uint8(np.clip(pixels + noise, 0, 255)), mode="L")
     return canvas
 
 
@@ -68,6 +79,7 @@ def main() -> None:
     parser.add_argument("--output-data-dir", type=Path, required=True)
     parser.add_argument("--val-ratio", type=float, default=0.1)
     parser.add_argument("--limit", type=int, default=0, help="maximum number of texts (0 = all)")
+    parser.add_argument("--augment", action="store_true", help="apply mild scan/photo-like augmentations")
     parser.add_argument("--font-size", type=int, default=42)
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
@@ -85,7 +97,7 @@ def main() -> None:
     rows = []
     for index, text in enumerate(texts):
         font = fonts[index % len(fonts)]
-        image = render_line(text, font, args.font_size, rng)
+        image = render_line(text, font, args.font_size, rng, augment=args.augment)
         identifier = hashlib.sha1(f"{args.seed}:{index}:{text}".encode("utf-8")).hexdigest()[:16]
         target = args.output_dir / f"{identifier}.png"
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -99,7 +111,7 @@ def main() -> None:
         with (args.output_data_dir / f"{split}.jsonl").open("w", encoding="utf-8", newline="\n") as stream:
             for row in split_rows:
                 stream.write(json.dumps(row, ensure_ascii=False) + "\n")
-    audit = {"samples": len(rows), "train": len(splits["train"]), "val": len(splits["val"]), "seed": args.seed, "fonts": [str(font) for font in fonts], "source": str(args.texts.resolve())}
+    audit = {"samples": len(rows), "train": len(splits["train"]), "val": len(splits["val"]), "seed": args.seed, "fonts": [str(font) for font in fonts], "source": str(args.texts.resolve()), "augment": args.augment}
     (args.output_data_dir / "synthetic_audit.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(audit, ensure_ascii=False, indent=2))
 

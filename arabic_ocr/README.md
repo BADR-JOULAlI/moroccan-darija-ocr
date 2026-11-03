@@ -84,7 +84,7 @@ AtlasOCR et les découpe en segments courts. Ces textes peuvent ensuite être re
 
 ```powershell
 python -X utf8 fetch_atlas_texts.py --output ../../work/atlas_synthetic/atlas_texts.jsonl --rows 1000 --max-chars 100
-python -X utf8 generate_synthetic_lines.py --texts ../../work/atlas_synthetic/atlas_texts.jsonl --fonts C:\Windows\Fonts\arial.ttf C:\Windows\Fonts\tahoma.ttf --output-dir ../../work/atlas_synthetic/images --output-data-dir ../../work/atlas_synthetic/manifests --seed 42
+python -X utf8 generate_synthetic_lines.py --texts ../../work/atlas_synthetic/atlas_texts.jsonl --fonts C:\Windows\Fonts\arial.ttf C:\Windows\Fonts\tahoma.ttf --output-dir ../../work/atlas_synthetic/images --output-data-dir ../../work/atlas_synthetic/manifests --seed 42 --augment
 ```
 
 Un premier essai automatique a produit **5 388 lignes synthétiques** (4 849 train / 539 validation). Après trois
@@ -95,6 +95,10 @@ Un second passage applique un filtre de scripts pour écarter les caractères é
 lignes** (4 796 train / 533 validation, 181 caractères). Après trois époques : CER **6,63 %**, WER **15,01 %** et
 exactitude **15,20 %**. Ce modèle est l'expérience synthétique la plus propre actuellement, mais reste un modèle de
 pré-entraînement : aucune image n'est une photographie réelle annotée.
+
+L'option `--augment` applique des variations légères de rotation, contraste, flou et bruit pour simuler des scans ou
+des captures imparfaites. Un test de génération augmenté a été validé sur 100 exemples ; les tests du projet restent
+à **18 réussis**.
 
 ### Premier corpus synthétique DODa
 
