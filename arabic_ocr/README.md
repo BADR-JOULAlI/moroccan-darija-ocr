@@ -112,6 +112,20 @@ L'augmentation légère améliore nettement la version forte, mais reste légèr
 augmentation après trois époques. Le checkpoint sans augmentation reste donc le meilleur pour cette comparaison ;
 la version légère sera réévaluée avec davantage d'époques et un mélange de documents réels lorsque disponible.
 
+### Fine-tuning mixte arabe + Darija
+
+Le premier entraînement mixte combine **14 927 lignes d'entraînement** du Bulletin officiel et d'AtlasOCR synthétique,
+avec **1 685 lignes de validation** et **200 caractères**. Le checkpoint arabe est adapté en copiant les caractères
+communs, puis entraîné cinq époques sur RTX 5070.
+
+| Évaluation | CER | WER | Exactitude ligne |
+|---|---:|---:|---:|
+| Validation mixte | **2,20 %** | **5,31 %** | **64,93 %** |
+| Test arabe officiel | **1,13 %** | **5,44 %** | **57,84 %** |
+
+Cette expérience améliore le test arabe par rapport au baseline (CER 1,49 %) tout en ajoutant le vocabulaire Darija.
+La validation mixte n'est pas un benchmark Darija réel : les images Darija restent synthétiques.
+
 ### Premier corpus synthétique DODa
 
 Un premier sous-ensemble reproductible de **5 000 phrases arabes Darija** a été généré localement depuis
