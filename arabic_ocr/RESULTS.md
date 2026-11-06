@@ -99,4 +99,5 @@ Toutes les prédictions : [predictions.jsonl](runs/baseline/test/predictions.jso
 
 ## Vérifications du code
 
-Résultat enregistré : **14 tests réussis**, 0 en échec, 0 ignorés. Détail : [tests_result.json](runs/baseline/tests_result.json).
+Les tests de régression sont exécutables avec `python -m pytest -q tests`; les artefacts de test temporaires ne sont pas conservés dans le dépôt.
+
