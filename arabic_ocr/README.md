@@ -126,6 +126,26 @@ communs, puis entraîné cinq époques sur RTX 5070.
 Cette expérience améliore le test arabe par rapport au baseline (CER 1,49 %) tout en ajoutant le vocabulaire Darija.
 La validation mixte n'est pas un benchmark Darija réel : les images Darija restent synthétiques.
 
+## Page complète et démonstration
+
+Le script `page_ocr.py` détecte les bandes de texte par projection horizontale, recadre les lignes et applique le
+checkpoint CTC dans l'ordre de lecture vertical. Il ne remplace pas encore un détecteur de mise en page pour les
+colonnes ou les tableaux :
+
+```powershell
+python -X utf8 page_ocr.py --checkpoint runs/mixed_darija/best.pt --image page.png --output page_result.json --device cuda
+```
+
+Pour lancer la démonstration interactive sur une image de ligne :
+
+```powershell
+python -X utf8 demo.py --checkpoint runs/mixed_darija/best.pt --device cuda
+```
+
+`evaluate_benchmark.py` accepte uniquement un manifest de lignes vérifiées. Il refuse les textes multiligne et les
+images de hauteur typique d'une page ; cette protection empêche de présenter AtlasOCRBench comme un score de ligne
+alors que ses images publiques sont souvent des pages ou des blocs.
+
 ### Premier corpus synthétique DODa
 
 Un premier sous-ensemble reproductible de **5 000 phrases arabes Darija** a été généré localement depuis
