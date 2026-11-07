@@ -7,3 +7,4 @@ matplotlib>=3.8
 pytest>=8
 arabic-reshaper>=3.0
 python-bidi>=0.6
+gradio>=5.0
