@@ -14,7 +14,7 @@ from train import evaluate, environment, make_loader
 
 def load_model(checkpoint_path, device):
     # Load only locally generated trusted checkpoints; optimizer/RNG need pickle.
-    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
     config, characters = checkpoint["config"], checkpoint["characters"]
     model = CRNN(len(characters) + 1, config["hidden_size"], config["channels"]).to(device)
     model.load_state_dict(checkpoint["model"])
