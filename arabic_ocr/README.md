@@ -24,6 +24,9 @@ L'architecture complète du pipeline, du corpus jusqu'à la publication du check
 
 ![Architecture détaillée CNN et CTC](assets/model_architecture_reference.png)
 
+Ce schéma de référence simplifie le réseau. Le code utilise bien **CNN + BiLSTM + CTC** ; les sources effectivement
+utilisées sont le Bulletin officiel, DODa et AtlasOCR, décrites ci-dessous.
+
 
 `03_test_images_transcriptions.ipynb` affiche les images du test officiel avec la référence, la prédiction et le CER de chaque ligne. Il exporte aussi `runs/baseline/test/test_images_transcriptions_gallery.png`.
 
@@ -93,14 +96,14 @@ du corpus synthétique Atlas, pas la qualité sur des images réelles.
 
 Un second passage applique un filtre de scripts pour écarter les caractères étrangers accidentels. Il produit **5 329
 lignes** (4 796 train / 533 validation, 181 caractères). Après trois époques : CER **6,63 %**, WER **15,01 %** et
-exactitude **15,20 %**. Ce modèle est l'expérience synthétique la plus propre actuellement, mais reste un modèle de
+exactitude **15,20 %**. Ce modèle est une expérience synthétique filtrée, mais reste un modèle de
 pré-entraînement : aucune image n'est une photographie réelle annotée.
 
 L'option `--augment` applique des variations légères de rotation, contraste, flou et bruit pour simuler des scans ou
 des captures imparfaites. Un test de génération augmenté a été validé sur 100 exemples ; les tests du projet restent
 à **18 réussis**.
 
-### Comparaison augmentation
+### Historique des essais d'augmentation
 
 | Expérience | CER | WER | Exactitude ligne |
 |---|---:|---:|---:|
@@ -108,9 +111,9 @@ des captures imparfaites. Un test de génération augmenté a été validé sur 
 | Augmentation forte | 9,52 % | 22,36 % | 7,50 % |
 | Augmentation légère | 7,52 % | 17,43 % | 11,07 % |
 
-L'augmentation légère améliore nettement la version forte, mais reste légèrement moins bonne que le modèle sans
-augmentation après trois époques. Le checkpoint sans augmentation reste donc le meilleur pour cette comparaison ;
-la version légère sera réévaluée avec davantage d'époques et un mélange de documents réels lorsque disponible.
+Ces scores portent sur des jeux de validation différents : l'ancien générateur utilisait le même état aléatoire pour
+le rendu et la séparation train/validation. Ils ne permettent pas de classer les augmentations. Les prochains essais
+doivent utiliser les mêmes groupes source et un jeu de validation fixe. Voir l'[audit](docs/EXPERIMENT_AUDIT.md).
 
 ### Fine-tuning mixte arabe + Darija
 
@@ -126,25 +129,33 @@ communs, puis entraîné cinq époques sur RTX 5070.
 Cette expérience améliore le test arabe par rapport au baseline (CER 1,49 %) tout en ajoutant le vocabulaire Darija.
 La validation mixte n'est pas un benchmark Darija réel : les images Darija restent synthétiques.
 
+L'audit a identifié des segments d'une même page source Atlas dans train et validation ; les résultats sont donc
+exploratoires. Le taux d'apprentissage effectif enregistré était 0,001 après restauration de l'optimiseur.
+
 ## Page complète et démonstration
 
 Le script `page_ocr.py` détecte les bandes de texte par projection horizontale, recadre les lignes et applique le
-checkpoint CTC dans l'ordre de lecture vertical. Il ne remplace pas encore un détecteur de mise en page pour les
-colonnes ou les tableaux :
+checkpoint CTC par lots limités en mémoire, dans l'ordre vertical. Les pages simples à une colonne sont visées ;
+colonnes multiples, tableaux et forte inclinaison nécessitent un détecteur de mise en page.
+
+Le [guide pratique](docs/USAGE.md) détaille l'installation, le téléchargement du checkpoint et la démo ligne/page.
+Les [vérifications de la livraison](docs/VALIDATION.md) décrivent le contrôle CPU/GPU et le test HTTP de Gradio.
+Exemple avec le checkpoint arabe inclus :
 
 ```powershell
-python -X utf8 page_ocr.py --checkpoint runs/mixed_darija/best.pt --image page.png --output page_result.json --device cuda
+python -X utf8 page_ocr.py --checkpoint runs/baseline/best.pt --image page.png --output page_result.json --text-output page_result.txt --device auto
 ```
 
-Pour lancer la démonstration interactive sur une image de ligne :
+Pour lancer la démonstration interactive sur une ligne ou une page :
 
 ```powershell
-python -X utf8 demo.py --checkpoint runs/mixed_darija/best.pt --device cuda
+python -m pip install -r requirements-demo.txt
+python -X utf8 demo.py --device auto
 ```
 
-`evaluate_benchmark.py` accepte uniquement un manifest de lignes vérifiées. Il refuse les textes multiligne et les
-images de hauteur typique d'une page ; cette protection empêche de présenter AtlasOCRBench comme un score de ligne
-alors que ses images publiques sont souvent des pages ou des blocs.
+`evaluate_benchmark.py` contrôle le format du manifest, les images lisibles, les IDs et les textes multiligne. La limite
+de hauteur reste une **heuristique**, elle ne vérifie pas le nombre de lignes visuelles ni l'indépendance train/test.
+AtlasOCRBench contient des pages/blocs : son évaluation devra porter sur le pipeline complet et les textes de page.
 
 ### Premier corpus synthétique DODa
 

@@ -1,0 +1,2 @@
+# Optional local interface. Install the project requirements first.
+gradio>=5.0,<6.0
