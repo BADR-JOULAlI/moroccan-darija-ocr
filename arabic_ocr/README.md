@@ -2,6 +2,10 @@
 
 Pipeline PyTorch pour reconnaître des **images de lignes déjà découpées** du Bulletin officiel marocain. Il comprend le téléchargement vérifié, la préparation des splits, l'entraînement CUDA, l'évaluation CER/WER et l'inférence sur une ligne.
 
+Pour apprendre la théorie et suivre les calculs du code : [cours complet en français](docs/COURS_OCR.md),
+[12 exercices corrigés et 10 questions d'entretien](docs/EXERCICES_OCR.md),
+ou [cours et corrigés au format PDF, 32 pages](docs/cours_moroccan_darija_ocr.pdf).
+
 Les mesures de l'exécution sur RTX 5070 et les exemples de prédictions figurent dans [RESULTS.md](RESULTS.md). Ce corpus contient de l'arabe imprimé administratif ; il ne permet pas de mesurer les performances en darija. Cette adaptation demandera des images et transcriptions représentatives supplémentaires.
 
 L'audit du format AtlasOCR, le chevauchement observé entre ses tests et AtlasOCRBench et la préparation des annotations de lignes sont décrits dans [ATLAS_NEXT.md](ATLAS_NEXT.md). Le script `inspect_atlas.py` reproduit cette inspection sans télécharger les fichiers Parquet complets.

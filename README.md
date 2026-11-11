@@ -9,6 +9,10 @@ See the complete setup, training commands, dataset audit, and adaptation instruc
 The local demo accepts a line or a simple single-column page and returns text plus line coordinates.
 Follow the [inference and demo guide](arabic_ocr/docs/USAGE.md). Gradio is an optional installation.
 
+For a complete explanation in French, read the [theory and technical course](arabic_ocr/docs/COURS_OCR.md),
+the [worked exercises](arabic_ocr/docs/EXERCICES_OCR.md), or download the
+[32-page course PDF](arabic_ocr/docs/cours_moroccan_darija_ocr.pdf).
+
 Historical Darija experiments use synthetic images. A [reproducibility audit](arabic_ocr/docs/EXPERIMENT_AUDIT.md)
 records their split and rendering limitations; new synthetic generation preserves source groups and diacritics.
 
