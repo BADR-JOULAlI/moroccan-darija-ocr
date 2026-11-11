@@ -33,6 +33,8 @@ def read_rows(path: Path, root: Path, normalize: bool) -> list[dict]:
             row = json.loads(line)
             if not isinstance(row.get("image"), str) or not isinstance(row.get("text"), str):
                 raise ValueError(f"{path}:{line_no}: each row needs string image and text")
+            if any(char in row["text"] for char in "\n\r\u2028\u2029"):
+                raise ValueError(f"{path}:{line_no}: multiline text; line alignment is required")
             text = normalize_text(row["text"]) if normalize else row["text"]
             if not text or "\n" in text or "\r" in text:
                 raise ValueError(f"{path}:{line_no}: text is empty or multiline; line alignment is required")
@@ -59,7 +61,11 @@ def read_rows(path: Path, root: Path, normalize: bool) -> list[dict]:
             if image_hash in seen_images:
                 raise ValueError(f"{path}:{line_no}: duplicate image content: {image.name}")
             seen_images.add(image_hash)
-            rows.append({"image": str(image), "text": text, "id": identifier})
+            provenance = {key: row[key] for key in (
+                "source_dataset", "source_split", "source_row_idx", "source_group",
+                "source_id", "split_group", "synthetic", "augment", "renderer", "font"
+            ) if key in row}
+            rows.append({**provenance, "image": str(image), "text": text, "id": identifier})
     return rows
 
 
